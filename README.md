@@ -10,10 +10,10 @@ A responsive Book Library application built using React, Bootstrap, and React Ro
 ------------
 
 * **Book Listing**: Displays a list of books with pagination (8 books per page) for easy browsing.
-* **Search Bar**: Allows users to search books by title, author, or genre, with results updating in real-time.
+* **Search Bar**: Allows users to search books by title or author with results updating in real-time.
 * **Loading Indicator**: Provides visual feedback while data is being fetched, enhancing user experience.
-* **Navbar**: A responsive navigation bar that adapts to different screen sizes and contains links to Home, Add Book, Edit Book, and Search.
-* **Add Book**: Users can add new books through a dedicated form, including title, author, genre, and description fields.
+* **Navbar**: A responsive navigation bar that contains links to Home, Add Book, Edit Book, and Search.
+* **Add Book**: Users can add new books through a dedicated form, including title, author and publication year.
 * **Edit Book**: Provides an editable form for users to update details of existing books.
 * **Routing**: Client-side routing implemented with React Router Dom for fast and smooth page transitions without reloading.
 * **Form Validation**: Ensures that required fields are filled out and data is valid before submission.
