@@ -28,6 +28,6 @@ A responsive Book Library application built using React, Bootstrap, and React Ro
 * **Routing Library**: React Router Dom handles navigation and enables deep linking within the app.
 * **Pagination**: Custom pagination logic using the React JS Pagination library to manage book lists efficiently.
 * **Data Storage**: Simulated with a JSON file as the data source, resembling a backend API. A simple fetch and update mechanism mimics API interactions.
-* **State Management**: Uses React's useState and useEffect hooks to manage local component states and handle side effects like data fetching.
-* **Reusable Components**: Components are modular and reusable, such as the BookCard and Form components, to ensure maintainability and scalability.
+* **State Management**:React's useState and useEffect hooks to manage local component states and handle side effects like data fetching.
+* **Reusable Components**: Components are modular and reusable like NavBar Component to ensure maintainability and scalability.
 
