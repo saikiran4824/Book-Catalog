@@ -1,0 +1,702 @@
+[
+    {
+      "id": 1,
+      "name": "The Midnight Library",
+      "genre": "Fantasy",
+      "author": "Matt Haig",
+      "publication_year": 2020
+    },
+    {
+      "id": 2,
+      "name": "The Invisible Life of Addie LaRue",
+      "genre": "Historical Fiction",
+      "author": "V.E. Schwab",
+      "publication_year": 2020
+    },
+    {
+      "id": 3,
+      "name": "The Night She Disappeared",
+      "genre": "Mystery",
+      "author": "Lisa Jewell",
+      "publication_year": 2021
+    },
+    {
+      "id": 4,
+      "name": "The Last Thing He Told Me",
+      "genre": "Thriller",
+      "author": "Laura Dave",
+      "publication_year": 2021
+    },
+    {
+      "id": 5,
+      "name": "Apples Never Fall",
+      "genre": "Domestic Fiction",
+      "author": "Liane Moriarty",
+      "publication_year": 2021
+    },
+    {
+      "id": 6,
+      "name": "Cloud Cuckoo Land",
+      "genre": "Literary Fiction",
+      "author": "Anthony Doerr",
+      "publication_year": 2021
+    },
+    {
+      "id": 7,
+      "name": "The Lincoln Highway",
+      "genre": "Historical Fiction",
+      "author": "Amor Towles",
+      "publication_year": 2021
+    },
+    {
+      "id": 8,
+      "name": "The Judge's List",
+      "genre": "Thriller",
+      "author": "John Grisham",
+      "publication_year": 2021
+    },
+    {
+      "id": 9,
+      "name": "Wish You Were Here",
+      "genre": "Romance",
+      "author": "Jodi Picoult",
+      "publication_year": 2022
+    },
+    {
+      "id": 10,
+      "name": "It Ends with Us",
+      "genre": "Romance",
+      "author": "Colleen Hoover",
+      "publication_year": 2016
+    },
+    {
+      "id": 11,
+      "name": "Verity",
+      "genre": "Psychological Thriller",
+      "author": "Colleen Hoover",
+      "publication_year": 2019
+    },
+    {
+      "id": 12,
+      "name": "The Seven Husbands of Evelyn Hugo",
+      "genre": "Contemporary",
+      "author": "Taylor Jenkins Reid",
+      "publication_year": 2017
+    },
+    {
+      "id": 13,
+      "name": "The Song of Achilles",
+      "genre": "Historical Fiction",
+      "author": "Madeline Miller",
+      "publication_year": 2011
+    },
+    {
+      "id": 14,
+      "name": "The Song of Troy",
+      "genre": "Historical Fiction",
+      "author": "Colleen McCullough",
+      "publication_year": 1998
+    },
+    {
+      "id": 15,
+      "name": "The Nightingale",
+      "genre": "Historical Fiction",
+      "author": "Kristin Hannah",
+      "publication_year": 2015
+    },
+    {
+      "id": 16,
+      "name": "The Hate U Give",
+      "genre": "Young Adult",
+      "author": "Angie Thomas",
+      "publication_year": 2017
+    },
+    {
+      "id": 17,
+      "name": "The Power",
+      "genre": "Science Fiction",
+      "author": "Naomi Alderman",
+      "publication_year": 2016
+    },
+    {
+      "id": 18,
+      "name": "The 7 1/2 Deaths of Evelyn Hardcastle",
+      "genre": "Mystery",
+      "author": "Stuart Turton",
+      "publication_year": 2018
+    },
+    {
+      "id": 19,
+      "name": "The Devil in the White City",
+      "genre": "Historical Non-Fiction",
+      "author": "Erik Larson",
+      "publication_year": 2003
+    },
+    {
+      "id": 20,
+      "name": "The Fifth Season",
+      "genre": "Fantasy",
+      "author": "N.K. Jemisin",
+      "publication_year": 2015
+    },
+    {
+        "id": 21,
+        "name": "The Obelisk Gate",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2016
+      },
+      {
+        "id": 22,
+        "name": "The Stone Sky",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2017
+      },
+      {
+        "id": 23,
+        "name": "The Poppy War",
+        "genre": "Fantasy",
+        "author": "R.F. Kuang",
+        "publication_year": 2018
+      },
+      {
+        "id": 24,
+        "name": "The Dragon Republic",
+        "genre": "Fantasy",
+        "author": "R.F. Kuang",
+        "publication_year": 2020
+      },
+      {
+        "id": 25,
+        "name": "The Burning God",
+        "genre": "Fantasy",
+        "author": "R.F. Kuang",
+        "publication_year": 2020
+      },
+      {
+        "id": 26,
+        "name": "The House of Shattered Wings",
+        "genre": "Urban Fantasy",
+        "author": "Aliette de Bodard",
+        "publication_year": 2015
+      },
+      {
+        "id": 27,
+        "name": "The House of Binding Thorns",
+        "genre": "Urban Fantasy",
+        "author": "Aliette de Bodard",
+        "publication_year": 2017
+      },
+      {
+        "id": 28,
+        "name": "The House of Whispers",
+        "genre": "Urban Fantasy",
+        "author": "Aliette de Bodard",
+        "publication_year": 2019
+      },
+      {
+        "id": 29,
+        "name": "The Ten Thousand Doors of January",
+        "genre": "Fantasy",
+        "author": "Alix E. Harrow",
+        "publication_year": 2019
+      },
+      {
+        "id": 30,
+        "name": "The Once and Future Witches",
+        "genre": "Fantasy",
+        "author": "Alix E. Harrow",
+        "publication_year": 2020
+      },
+      {
+        "id": 31,
+        "name": "A Desolation Called Peace",
+        "genre": "Science Fiction",
+        "author": "Arkady Martine",
+        "publication_year": 2021
+      },
+      {
+        "id": 32,
+        "name": "A Memory Called Empire",
+        "genre": "Science Fiction",
+        "author": "Arkady Martine",
+        "publication_year": 2020
+      },
+      {
+        "id": 33,
+        "name": "The City We Became",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2020
+      },
+      {
+        "id": 34,
+        "name": "The World We Make",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2022
+      },
+      {
+        "id": 35,
+        "name": "The First Fifteen Lives of Harry August",
+        "genre": "Science Fiction",
+        "author": "Claire North",
+        "publication_year": 2014
+      },
+      {
+        "id": 36,
+        "name": "The Sudden Appearance of Hope",
+        "genre": "Science Fiction",
+        "author": "Claire North",
+        "publication_year": 2016
+      },
+      {
+        "id": 37,
+        "name": "The End of the Day",
+        "genre": "Science Fiction",
+        "author": "Claire North",
+        "publication_year": 2017
+      },
+      {
+        "id": 38,
+        "name": "84K",
+        "genre": "Science Fiction",
+        "author": "Claire North",
+        "publication_year": 2018
+      },
+      {
+        "id": 39,
+        "name": "The Pursuit of William Abbey",
+        "genre": "Historical Fiction",
+        "author": "Claire North",
+        "publication_year": 2019
+      },
+      {
+        "id": 40,
+        "name": "Notes from the Burning Age",
+        "genre": "Science Fiction",
+        "author": "Claire North",
+        "publication_year": 2021
+      },
+      {
+        "id": 41,
+        "name": "The Black Tides of Heaven",
+        "genre": "Fantasy",
+        "author": "J.Y. Yang",
+        "publication_year": 2017
+      },
+      {
+        "id": 42,
+        "name": "The Red Threads of Fortune",
+        "genre": "Fantasy",
+        "author": "J.Y. Yang",
+        "publication_year": 2017
+      },
+      {
+        "id": 43,
+        "name": "The Descent of Monsters",
+        "genre": "Fantasy",
+        "author": "J.Y. Yang",
+        "publication_year": 2018
+      },
+      {
+        "id": 44,
+        "name": "The Ascent to Godhood",
+        "genre": "Fantasy",
+        "author": "J.Y. Yang",
+        "publication_year": 2019
+      },
+      {
+        "id": 45,
+        "name": "The House in the Cerulean Sea",
+        "genre": "Fantasy",
+        "author": "TJ Klune",
+        "publication_year": 2020
+      },
+      {
+        "id": 46,
+        "name": "The Extraordinaries",
+        "genre": "Young Adult",
+        "author": "TJ Klune",
+        "publication_year": 2020
+      },
+      {
+        "id": 47,
+        "name": "The Invisible Life of Addie LaRue",
+        "genre": "Historical Fiction",
+        "author": "V.E. Schwab",
+        "publication_year": 2020
+      },
+      {
+        "id": 48,
+        "name": "The City of Brass",
+        "genre": "Fantasy",
+        "author": "S.A. Chakraborty",
+        "publication_year": 2017
+      },
+      {
+        "id": 49,
+        "name": "The Kingdom of Copper",
+        "genre": "Fantasy",
+        "author": "S.A. Chakraborty",
+        "publication_year": 2019
+      },
+      {
+        "id": 50,
+        "name": "The Empire of Gold",
+        "genre": "Fantasy",
+        "author": "S.A. Chakraborty",
+        "publication_year": 2020
+      },
+      {
+        "id": 51,
+        "name": "The Gilded Wolves",
+        "genre": "Young Adult",
+        "author": "Roshani Chokshi",
+        "publication_year": 2019
+      },
+      {
+        "id": 52,
+        "name": "The Silvered Serpent",
+        "genre": "Young Adult",
+        "author": "Roshani Chokshi",
+        "publication_year": 2020
+      },
+      {
+        "id": 53,
+        "name": "The Star-Touched Queen",
+        "genre": "Young Adult",
+        "author": "Roshani Chokshi",
+        "publication_year": 2016
+      },
+      {
+        "id": 54,
+        "name": "A Crown of Wishes",
+        "genre": "Young Adult",
+        "author": "Roshani Chokshi",
+        "publication_year": 2017
+      },
+      {
+        "id": 55,
+        "name": "The Bridge Kingdom",
+        "genre": "Fantasy",
+        "author": "Danielle L. Jensen",
+        "publication_year": 2018
+      },
+      {
+        "id": 56,
+        "name": "The Traitor Queen",
+        "genre": "Fantasy",
+        "author": "Danielle L. Jensen",
+        "publication_year": 2019
+      },
+      {
+        "id": 57,
+        "name": "The Dark Shores",
+        "genre": "Fantasy",
+        "author": "Danielle L. Jensen",
+        "publication_year": 2019
+      },
+      {
+        "id": 58,
+        "name": "The Goddess of Fate",
+        "genre": "Fantasy",
+        "author": "Danielle L. Jensen",
+        "publication_year": 2020
+      },
+      {
+        "id": 59,
+        "name": "The Winner's Curse",
+        "genre": "Young Adult",
+        "author": "Marie Rutkoski",
+        "publication_year": 2014
+      },
+      {
+        "id": 60,
+        "name": "The Winner's Crime",
+        "genre": "Young Adult",
+        "author": "Marie Rutkoski",
+        "publication_year": 2015
+      },
+      {
+        "id": 61,
+        "name": "The Winner's Kiss",
+        "genre": "Young Adult",
+        "author": "Marie Rutkoski",
+        "publication_year": 2016
+      },
+      {
+        "id": 62,
+        "name": "The Bridge of Little Wings",
+        "genre": "Fantasy",
+        "author": "Heidi Heilig",
+        "publication_year": 2017
+      },
+      {
+        "id": 63,
+        "name": "For a Muse of Fire",
+        "genre": "Fantasy",
+        "author": "Heidi Heilig",
+        "publication_year": 2018
+      },
+      {
+        "id": 64,
+        "name": "A Kingdom for a Stage",
+        "genre": "Fantasy",
+        "author": "Heidi Heilig",
+        "publication_year": 2019
+      },
+      {
+        "id": 65,
+        "name": "The Kingdom of the Blazing Phoenix",
+        "genre": "Fantasy",
+        "author": "Julie C. Dao",
+        "publication_year": 2018
+      },
+      {
+        "id": 66,
+        "name": "Forest of a Thousand Lanterns",
+        "genre": "Fantasy",
+        "author": "Julie C. Dao",
+        "publication_year": 2017
+      },
+      {
+        "id": 67,
+        "name": "The Kingdom of the Wicked",
+        "genre": "Fantasy",
+        "author": "Kerri Maniscalco",
+        "publication_year": 2020
+      },
+      {
+        "id": 68,
+        "name": "The Devil Makes Three",
+        "genre": "Mystery",
+        "author": "Teresa Toten",
+        "publication_year": 2016
+      },
+      {
+        "id": 69,
+        "name": "The Weight of Feathers",
+        "genre": "Young Adult",
+        "author": "Anna-Marie McLemore",
+        "publication_year": 2015
+      },
+      {
+        "id": 70,
+        "name": "The Star-Touched Queen",
+        "genre": "Young Adult",
+        "author": "Roshani Chokshi",
+        "publication_year": 2016
+      },
+      {
+        "id": 71,
+        "name": "When Dimple Met Rishi",
+        "genre": "Romance",
+        "author": "Sandhya Menon",
+        "publication_year": 2017
+      },
+      {
+        "id": 72,
+        "name": "From Twinkle, with Love",
+        "genre": "Romance",
+        "author": "Sandhya Menon",
+        "publication_year": 2018
+      },
+      {
+        "id": 73,
+        "name": "There's Something About Sweetie",
+        "genre": "Romance",
+        "author": "Sandhya Menon",
+        "publication_year": 2019
+      },
+      {
+        "id": 74,
+        "name": "10 Things I Hate About Pinky",
+        "genre": "Romance",
+        "author": "Sandhya Menon",
+        "publication_year": 2020
+      },
+      {
+        "id": 75,
+        "name": "The Poet X",
+        "genre": "Poetry",
+        "author": "Elizabeth Acevedo",
+        "publication_year": 2018
+      },
+      {
+        "id": 76,
+        "name": "With the Fire on High",
+        "genre": "Poetry",
+        "author": "Elizabeth Acevedo",
+        "publication_year": 2019
+      },
+      {
+        "id": 77,
+        "name": "Clap When You Land",
+        "genre": "Poetry",
+        "author": "Elizabeth Acevedo",
+        "publication_year": 2020
+      },
+      {
+        "id": 78,
+        "name": "In the Dream House",
+        "genre": "Memoir",
+        "author": "Carmen Maria Machado",
+        "publication_year": 2019
+      },
+      {
+        "id": 79,
+        "name": "Her Body and Other Parties",
+        "genre": "Short Stories",
+        "author": "Carmen Maria Machado",
+        "publication_year": 2017
+      },
+      {
+        "id": 80,
+        "name": "The Poppy War",
+        "genre": "Fantasy",
+        "author": "R.F. Kuang",
+        "publication_year": 2018
+      },
+      {
+        "id": 81,
+        "name": "The Dragon Republic",
+        "genre": "Fantasy",
+        "author": "R.F. Kuang",
+        "publication_year": 2020
+      },
+      {
+        "id": 82,
+        "name": "The Burning God",
+        "genre": "Fantasy",
+        "author": "R.F. Kuang",
+        "publication_year": 2020
+      },
+      {
+        "id": 83,
+        "name": "The Fifth Season",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2015
+      },
+      {
+        "id": 84,
+        "name": "The Obelisk Gate",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2016
+      },
+      {
+        "id": 85,
+        "name": "The Stone Sky",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2017
+      },
+      {
+        "id": 86,
+        "name": "The Power",
+        "genre": "Science Fiction",
+        "author": "Naomi Alderman",
+        "publication_year": 2016
+      },
+      {
+        "id": 87,
+        "name": "The Testaments",
+        "genre": "Science Fiction",
+        "author": "Margaret Atwood",
+        "publication_year": 2019
+      },
+      {
+        "id": 88,
+        "name": "The Water Dancer",
+        "genre": "Historical Fiction",
+        "author": "Ta-Nehisi Coates",
+        "publication_year": 2019
+      },
+      {
+        "id": 89,
+        "name": "The Nickel Boys",
+        "genre": "Historical Fiction",
+        "author": "Colson Whitehead",
+        "publication_year": 2019
+      },
+      {
+        "id": 90,
+        "name": "Red, White, and Royal Blue",
+        "genre": "Romance",
+        "author": "Casey McQuiston",
+        "publication_year": 2019
+      },
+      {
+        "id": 91,
+        "name": "The Family Upstairs",
+        "genre": "Mystery",
+        "author": "Lisa Jewell",
+        "publication_year": 2019
+      },
+      {
+        "id": 92,
+        "name": "The Last House Guest",
+        "genre": "Mystery",
+        "author": "Megan Miranda",
+        "publication_year": 2019
+      },
+      {
+        "id": 93,
+        "name": "The Stranger Diaries",
+        "genre": "Mystery",
+        "author": "Elly Griffiths",
+        "publication_year": 2019
+      },
+      {
+        "id": 94,
+        "name": "The 7 1/2 Deaths of Evelyn Hardcastle",
+        "genre": "Mystery",
+        "author": "Stuart Turton",
+        "publication_year": 2018
+      },
+      {
+        "id": 95,
+        "name": "The Ten Thousand Doors of January",
+        "genre": "Fantasy",
+        "author": "Alix E. Harrow",
+        "publication_year": 2019
+      },
+      {
+        "id": 96,
+        "name": "The Once and Future Witches",
+        "genre": "Fantasy",
+        "author": "Alix E. Harrow",
+        "publication_year": 2020
+      },
+      {
+        "id": 97,
+        "name": "The House in the Cerulean Sea",
+        "genre": "Fantasy",
+        "author": "TJ Klune",
+        "publication_year": 2020
+      },
+      {
+        "id": 98,
+        "name": "The Extraordinaries",
+        "genre": "Young Adult",
+        "author": "TJ Klune",
+        "publication_year": 2020
+      },
+      {
+        "id": 99,
+        "name": "The Invisible Life of Addie LaRue",
+        "genre": "Historical Fiction",
+        "author": "V.E. Schwab",
+        "publication_year": 2020
+      },
+      {
+        "id": 100,
+        "name": "The City We Became",
+        "genre": "Fantasy",
+        "author": "N.K. Jemisin",
+        "publication_year": 2020
+      }
+    ]
