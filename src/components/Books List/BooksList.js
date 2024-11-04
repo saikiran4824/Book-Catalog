@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Image, Spinner } from "react-bootstrap";
+import { Container, Table, Spinner, Alert } from "react-bootstrap";
 import Pagination from "react-js-pagination";
-
+import './BooksList.css'
 import NavBar from "../NavBar/NavBar";
 
 const BookList = () => {
@@ -9,6 +9,10 @@ const BookList = () => {
   const [page, setPage] = useState(1);
   const [rowsPerPage] = useState(8);
   const [loading, setLoading] = useState(true);
+  const [paginationLoading, setPaginationLoading] = useState(false);
+  const [editableRows, setEditableRows] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
 
   useEffect(() => {
     fetch("/data.json")
@@ -16,12 +20,50 @@ const BookList = () => {
       .then((data) => {
         setBooks(data);
         setLoading(false);
-      });
+      })
+      .catch((error) => console.error(error));
   }, []);
 
   const handlePageChange = (pageNumber) => {
     setPage(pageNumber);
+    setPaginationLoading(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      setPaginationLoading(false);
+    }, 500);
+  };
+
+  const handleEdit = (id) => {
+    setEditableRows((prev) => ({ ...prev, [id]: true }));
+  };
+
+  const handleSave = (id, book) => {
+    const updatedBooks = books.map((b) => (b.id === id ? book : b));
+    setBooks(updatedBooks);
+    setEditableRows((prev) => ({ ...prev, [id]: false }));
+    setShowAlert(true);
+    setAlertMessage("Successfully Saved!");
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 1500);
+  };
+
+  const handleDelete = (id) => {
+    const updatedBooks = books.filter((book) => book.id !== id);
+    setBooks(updatedBooks);
+    setShowAlert(true);
+    setAlertMessage("Successfully Deleted!");
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
+  };
+
+  const handleInputChange = (id, event) => {
+    const { name, value } = event.target;
+    const updatedBooks = books.map((b) =>
+      b.id === id ? { ...b, [name]: value } : b
+    );
+    setBooks(updatedBooks);
   };
 
   const indexOfLastBook = page * rowsPerPage;
@@ -31,78 +73,168 @@ const BookList = () => {
   return (
     <div>
       <NavBar />
-      <h1 className="text-center mt-2 mb-2">
-        <a className="navbar-brand" href="/">
-          <i className="bi bi-book"></i> Books Catalog
-        </a>
-      </h1>
-      <Container fluid="sm" className="mt-4">
-        {loading ? (
-          <div className="d-flex justify-content-center align-items-center">
+      <div style={{ position: "relative" }}>
+        {(paginationLoading || loading) && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(255, 255, 255, 0.7)",
+              zIndex: 1,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <Spinner animation="border" role="status">
               <span className="visually-hidden">Loading...</span>
             </Spinner>
           </div>
-        ) : (
-          <Row className="g-4">
-            {currentBooks.map((book) => (
-              <Col xs={12} sm={6} md={4} lg={3} key={book.id}>
-                <Card
-                  style={{ height: "100%", width: "100%" }}
-                  className="mb-4"
-                >
-                  <Image
-                    src="https://plus.unsplash.com/premium_photo-1676422355165-d809008b8342?q=80&w=1899&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    fluid
-                    alt="Book Image"
-                    style={{ height: 150, objectFit: "cover" }}
-                  />
-                  <Card.Body>
-                    <Card.Title>{book.name}</Card.Title>
-                    <Card.Text>
-                      <span className="text-success">Author: </span>
-                      {book.author}
-                    </Card.Text>
-                    <Card.Text>
-                      <span className="text-warning">Genre: </span>
-                      {book.genre}
-                    </Card.Text>
-                    <Card.Text>
-                      <span className="text-info">Publication Year: </span>
-                      {book.publication_year}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
         )}
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "20px",
+            opacity: paginationLoading || loading ? 0.5 : 1,
+            pointerEvents: paginationLoading || loading ? "none" : "auto",
           }}
         >
-          <Pagination
-            activePage={page}
-            itemsCountPerPage={rowsPerPage}
-            totalItemsCount={books.length}
-            pageRangeDisplayed={5}
-            onChange={handlePageChange}
-            itemClass="page-item"
-            linkClass="page-link"
-            activeClass="active"
-            className="mt-4 mt-2 mb-2 justify-content-center pagination-container"
-            style={{
-              fontSize: "18px",
-              color: "#FFA07A",
-              opacity: "0.5",
-            }}
-          />
+          <h1 className="text-center mt-2 mb-2">
+            <a className="navbar-brand" href="/">
+              <i className="bi bi-book"></i> Books Catalog
+            </a>
+          </h1>
+          <Container fluid="sm" className="mt-4">
+            {showAlert && (
+              <Alert 
+  variant="success" 
+  className="alert-orange"
+>
+  {alertMessage}
+</Alert>
+            )}
+            <Table responsive striped bordered hover>
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Book</th>
+                  <th>Author</th>
+                  <th>Genre</th>
+                  <th>Year Published</th>
+                  <th>Edit Book</th>
+                  <th>Delete Book</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currentBooks.map((book, index) => (
+                  <tr key={book.id}>
+                    <td>{(page - 1) * rowsPerPage + index + 1}</td>
+                    <td>
+                      {editableRows[book.id] ? (
+                        <input
+                          type="text"
+                          name="name"
+                          value={book.name}
+                          onChange={(e) => handleInputChange(book.id, e)}
+                        />
+                      ) : (
+                        book.name
+                      )}
+                    </td>
+                    <td>
+                      {editableRows[book.id] ? (
+                        <input
+                          type="text"
+                          name="author"
+                          value={book.author}
+                          onChange={(e) => handleInputChange(book.id, e)}
+                        />
+                      ) : (
+                        book.author
+                      )}
+                    </td>
+                    <td>
+                      {editableRows[book.id] ? (
+                        <input
+                          type="text"
+                          name="genre"
+                          value={book.genre}
+                          onChange={(e) => handleInputChange(book.id, e)}
+                        />
+                      ) : (
+                        book.genre
+                      )}
+                    </td>
+                    <td>
+                      {editableRows[book.id] ? (
+                        <input
+                          type="number"
+                          name="publication_year"
+                          value={book.publication_year}
+                          onChange={(e) => handleInputChange(book.id, e)}
+                        />
+                      ) : (
+                        book.publication_year
+                      )}
+                    </td>
+                    <td>
+                      {editableRows[book.id] ? (
+                        <button
+                          className="btn btn-success"
+                          onClick={() => handleSave(book.id, book)}
+                        >
+                          Save
+                        </button>
+                      ) : (
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => handleEdit(book.id)}
+                        >
+                          Edit
+                        </button>
+                      )}
+                    </td>
+                    <td>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => handleDelete(book.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "20px",
+              }}
+            >
+              <Pagination
+                activePage={page}
+                itemsCountPerPage={rowsPerPage}
+                totalItemsCount={books.length}
+                pageRangeDisplayed={5}
+                onChange={handlePageChange}
+                itemClass="page-item"
+                linkClass="page-link"
+                activeClass="active"
+                className="mt-4 mt-2 mb-2 justify-content-center pagination-container"
+                style={{
+                  fontSize: "18px",
+                  color: "#FFA07A",
+                  opacity: "0.5",
+                }}
+              />
+            </div>
+          </Container>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
