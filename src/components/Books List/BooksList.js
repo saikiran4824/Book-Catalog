@@ -25,8 +25,6 @@ const BookList = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  
-  
   const handlePageChange = (pageNumber) => {
     setPage(pageNumber);
     setPaginationLoading(true);
@@ -61,8 +59,6 @@ const BookList = () => {
     }, 2000);
   };
 
-
-
   const handleInputChange = (id, event) => {
     const { name, value } = event.target;
     const updatedBooks = books.map((b) =>
@@ -71,28 +67,19 @@ const BookList = () => {
     setBooks(updatedBooks);
   };
 
+  const generatePDF = () => {
+    const element = document.getElementById('tableContent');
+    const options = {
+      margin:       1,
+      filename:     'table-data.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
 
-  const indexOfLastBook = page * rowsPerPage;
-  const indexOfFirstBook = indexOfLastBook - rowsPerPage;
-  const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
+    html2pdf().set(options).from(element).save();
+  };
 
-
-  
-    
-      const generatePDF = () => {
-        const element = document.getElementById('tableContent');
-        const options = {
-          margin:       1,
-          filename:     'table-data.pdf',
-          image:        { type: 'jpeg', quality: 0.98 },
-          html2canvas:  { scale: 2 },
-          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-        };
-    
-        html2pdf().set(options).from(element).save();
-      };
-    
-  
   const handleShare = () => {
     const shareData = {
       title: "Books List",
@@ -107,17 +94,21 @@ const BookList = () => {
     }
   };
 
+  const indexOfLastBook = page * rowsPerPage;
+  const indexOfFirstBook = indexOfLastBook - rowsPerPage;
+  const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
+
   return (
     <div>
       <NavBar />
-      {/* <div className="d-flex justify-content-between mb-2">
-              <Button variant="primary" onClick={generatePDF}>
-                Download as PDF
-              </Button>
-              <Button variant="success" onClick={handleShare}>
-                Share
-              </Button>
-            </div> */}
+      <div className="d-flex justify-content-between mb-2">
+        <Button variant="primary" onClick={generatePDF}>
+          Download as PDF
+        </Button>
+        <Button variant="success" onClick={handleShare}>
+          Share
+        </Button>
+      </div>
       <div style={{ position: "relative" }}>
         {(paginationLoading || loading) && (
           <div
@@ -145,18 +136,18 @@ const BookList = () => {
             pointerEvents: paginationLoading || loading ? "none" : "auto",
           }}
         >
-          <h1 className="text-center mt-2 mb-2">
+                    <h1 className="text-center mt-2 mb-2">
             <a className="navbar-brand" href="/">
               <i className="bi bi-book"></i> Books Catalog
             </a>
           </h1>
-          <Container fluid="sm" className="mt-4">
+          <Container fluid="sm" className="mt-4 p-3"> 
             {showAlert && (
               <Alert variant="success" className="alert-orange">
                 {alertMessage}
               </Alert>
             )}
-            <Table id="table" responsive striped bordered hover className="responsive-table">
+            <Table id="tableContent" responsive striped bordered hover className="responsive-table">
               <thead>
                 <tr>
                   <th>S.No</th>
@@ -180,7 +171,7 @@ const BookList = () => {
                           value={book.name}
                           onChange={(e) => handleInputChange(book.id, e)}
                         />
-                                            ) : (
+                      ) : (
                         book.name
                       )}
                     </td>
