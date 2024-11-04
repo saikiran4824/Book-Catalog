@@ -81,17 +81,29 @@ const BookList = () => {
   };
 
   const handleShare = () => {
-    const shareData = {
-      title: "Books List",
-      text: "Check out our books list!",
-      url: window.location.href,
+    const element = document.getElementById('tableContent');
+    const options = {
+      margin:       1,
+      filename:     'table-data.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
-
-    if (navigator.share) {
-      navigator.share(shareData);
-    } else {
-      alert("Sharing not supported on this device.");
-    }
+  
+    html2pdf().set(options).from(element).output('blob').then((pdfBlob) => {
+      if (navigator.share) {
+        const file = new File([pdfBlob], 'table-data.pdf', { type: 'application/pdf' });
+        const shareData = {
+          title: "Books List",
+          text: "Check out our books list!",
+          files: [file],
+        };
+  
+        navigator.share(shareData);
+      } else {
+        alert("Sharing not supported on this device.");
+      }
+    });
   };
 
   const indexOfLastBook = page * rowsPerPage;
@@ -101,7 +113,7 @@ const BookList = () => {
   return (
     <div>
       <NavBar />
-      <div className="d-flex justify-content-between mb-2">
+      <div className="d-flex mb-2">
         <Button variant="primary" onClick={generatePDF}>
           Download as PDF
         </Button>
