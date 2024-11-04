@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Table, Spinner, Alert } from "react-bootstrap";
+import { Container, Table, Spinner, Alert, Button } from "react-bootstrap";
 import Pagination from "react-js-pagination";
+import html2pdf from 'html2pdf.js'
 import './BooksList.css'
 import NavBar from "../NavBar/NavBar";
 
@@ -24,6 +25,8 @@ const BookList = () => {
       .catch((error) => console.error(error));
   }, []);
 
+  
+  
   const handlePageChange = (pageNumber) => {
     setPage(pageNumber);
     setPaginationLoading(true);
@@ -58,6 +61,8 @@ const BookList = () => {
     }, 2000);
   };
 
+
+
   const handleInputChange = (id, event) => {
     const { name, value } = event.target;
     const updatedBooks = books.map((b) =>
@@ -66,13 +71,53 @@ const BookList = () => {
     setBooks(updatedBooks);
   };
 
+
   const indexOfLastBook = page * rowsPerPage;
   const indexOfFirstBook = indexOfLastBook - rowsPerPage;
   const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
 
+
+  
+    
+      const generatePDF = () => {
+        const element = document.getElementById('tableContent');
+        const options = {
+          margin:       1,
+          filename:     'table-data.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2 },
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+    
+        html2pdf().set(options).from(element).save();
+      };
+    
+  
+  const handleShare = () => {
+    const shareData = {
+      title: "Books List",
+      text: "Check out our books list!",
+      url: window.location.href,
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData);
+    } else {
+      alert("Sharing not supported on this device.");
+    }
+  };
+
   return (
     <div>
       <NavBar />
+      {/* <div className="d-flex justify-content-between mb-2">
+              <Button variant="primary" onClick={generatePDF}>
+                Download as PDF
+              </Button>
+              <Button variant="success" onClick={handleShare}>
+                Share
+              </Button>
+            </div> */}
       <div style={{ position: "relative" }}>
         {(paginationLoading || loading) && (
           <div
@@ -107,14 +152,11 @@ const BookList = () => {
           </h1>
           <Container fluid="sm" className="mt-4">
             {showAlert && (
-              <Alert 
-  variant="success" 
-  className="alert-orange"
->
-  {alertMessage}
-</Alert>
+              <Alert variant="success" className="alert-orange">
+                {alertMessage}
+              </Alert>
             )}
-            <Table responsive striped bordered hover>
+            <Table id="table" responsive striped bordered hover className="responsive-table">
               <thead>
                 <tr>
                   <th>S.No</th>
@@ -130,7 +172,7 @@ const BookList = () => {
                 {currentBooks.map((book, index) => (
                   <tr key={book.id}>
                     <td>{(page - 1) * rowsPerPage + index + 1}</td>
-                    <td>
+                    <td data-label="Book">
                       {editableRows[book.id] ? (
                         <input
                           type="text"
@@ -138,11 +180,11 @@ const BookList = () => {
                           value={book.name}
                           onChange={(e) => handleInputChange(book.id, e)}
                         />
-                      ) : (
+                                            ) : (
                         book.name
                       )}
                     </td>
-                    <td>
+                    <td data-label="Author">
                       {editableRows[book.id] ? (
                         <input
                           type="text"
@@ -154,7 +196,7 @@ const BookList = () => {
                         book.author
                       )}
                     </td>
-                    <td>
+                    <td data-label="Genre">
                       {editableRows[book.id] ? (
                         <input
                           type="text"
@@ -166,7 +208,7 @@ const BookList = () => {
                         book.genre
                       )}
                     </td>
-                    <td>
+                    <td data-label="Year Published">
                       {editableRows[book.id] ? (
                         <input
                           type="number"

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../NavBar/NavBar';
 import Table from 'react-bootstrap/Table';
+import TableToPDF from '../PdfConvert/TabletoPdf';
 
 function BookSearch() {
   const [books, setBooks] = useState([]);
@@ -31,6 +32,7 @@ function BookSearch() {
   return (
     <>
       <NavBar />
+      <TableToPDF/>
       <div className="container mt-5">
         <h1 className="text-center">Book Search</h1>
         <form>

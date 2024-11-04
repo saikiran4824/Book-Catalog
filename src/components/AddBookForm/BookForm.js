@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
-import { Table, Alert } from "react-bootstrap";
+import { Table, Alert, Form, Container, Row,Button, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Bookform.css";
+import TableToPDF from "../PdfConvert/TabletoPdf";
+
 const BookForm = () => {
   const [author, setAuthor] = useState("");
   const [publicationYear, setPublicationYear] = useState("");
@@ -60,78 +62,85 @@ const BookForm = () => {
   return (
     <>
       <NavBar />
-      <div style={{ padding: 20 }}>
-        <h2>Add Book</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Author Name:</label>
-            <input
-              type="text"
-              className="form-control"
-              value={author}
-              onChange={(e) => setAuthor(e.target.value)}
-              placeholder="Enter author name"
-            />
-            {error.author && <p style={{ color: "red" }}>{error.author}</p>}
-          </div>
-          <div className="form-group">
-            <label>Publication Year:</label>
-            <input
-              type="number"
-              className="form-control"
-              value={publicationYear}
-              onChange={(e) => setPublicationYear(e.target.value)}
-              placeholder="Enter publication year"
-            />
-            {error.publicationYear && (
-              <p style={{ color: "red" }}>{error.publicationYear}</p>
+      <Container className="mt-5">
+        <Row className="justify-content-center">
+          <Col md={6}>
+            <h2 className="text-center mb-4">Add Book</h2>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="author">
+                <Form.Label>Author Name:</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={author}
+                  onChange={(e) => setAuthor(e.target.value)}
+                  placeholder="Enter author name"
+                  isInvalid={error.author}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {error.author}
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group controlId="publicationYear" className="mt-3">
+                <Form.Label>Publication Year:</Form.Label>
+                <Form.Control
+                  type="number"
+                  value={publicationYear}
+                  onChange={(e) => setPublicationYear(e.target.value)}
+                  placeholder="Enter publication year"
+                  isInvalid={error.publicationYear}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {error.publicationYear}
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Form.Group controlId="bookName" className="mt-3">
+                <Form.Label>Book Name:</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={bookName}
+                  onChange={(e) => setBookName(e.target.value)}
+                  placeholder="Enter book name"
+                  isInvalid={error.bookName}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {error.bookName}
+                </Form.Control.Feedback>
+              </Form.Group>
+              <Button variant="primary" type="submit" className="mt-3">
+                Submit
+              </Button>
+            </Form>
+            {showAlert && (
+              <Alert variant="success" className="alert-orange mt-4">
+                {alertMessage}
+              </Alert>
             )}
-          </div>
-          <div className="form-group">
-            <label>Book Name:</label>
-            <input
-              type="text"
-              className="form-control"
-              value={bookName}
-              onChange={(e) => setBookName(e.target.value)}
-              placeholder="Enter book name"
-            />
-            {error.bookName && <p style={{ color: "red" }}>{error.bookName}</p>}
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </form>
-        {showAlert && (
-          <Alert variant="success" className="alert-orange">
-            {alertMessage}
-          </Alert>
-        )}
-        {books.length > 0 && (
-          <Table striped bordered hover className="mt-4">
-            <thead>
-              <tr>
-                <th>S.No</th>
-                <th>Book Name</th>
-                <th>Author</th>
-                <th>Publication Year</th>
+            {books.length > 0 && (
+              <Table striped bordered hover className="mt-4">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Publication Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {books.map((book, index) => (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td>{book.bookName}</td>
+                      <td>{book.author}</td>
+                      <td>{book.publicationYear}</td>
+                    </tr>
+                  ))}
+                </tbody>
                 
-              </tr>
-            </thead>
-            <tbody>
-              {books.map((book, index) => (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td>{book.bookName}</td>
-                  <td>{book.author}</td>
-                  <td>{book.publicationYear}</td>
-                  
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        )}
-      </div>
+              </Table>
+            )}
+            </Col>
+        </Row>
+      </Container>
     </>
   );
 };

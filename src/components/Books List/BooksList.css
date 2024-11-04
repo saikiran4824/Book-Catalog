@@ -22,3 +22,46 @@
       top: 50px; /* end at the desired position */
     }
   }
+
+  /* BooksList.css */
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Large screens */
+@media (min-width: 768px) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: 10px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .responsive-table {
+    border: none;
+  }
+  .responsive-table thead {
+    display: none;
+  }
+  .responsive-table tr {
+    margin-bottom: 20px;
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+  .responsive-table td {
+    display: block;
+    text-align: right;
+    padding: 10px 0;
+    border: none;
+  }
+  .responsive-table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: left;
+  }
+}
