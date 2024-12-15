@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
 
 const BookTable = ({
   books,
@@ -33,8 +34,9 @@ const BookTable = ({
 
   return (
     <div className="table-container">
+      {/* Desktop View */}
       {showDesktopTable && (
-        <Table id="tableContent" responsive striped bordered hover>
+        <Table id="tableContent" responsive striped bordered hover >
           <thead>
             <tr>
               <th>S.No</th>
@@ -100,28 +102,20 @@ const BookTable = ({
                 </td>
                 <td>
                   {editableRows[book.id] ? (
-                    <button
-                      className="btn btn-success"
-                      onClick={() => handleSave(book.id, book)}
-                    >
+                    <Button variant="primary" size="sm" onClick={() => handleSave(book.id, book)}>
                       Save
-                    </button>
+                    </Button>
                   ) : (
                     <button
-                      className="btn btn-primary"
-                      onClick={() =>
-                        setEditableRows((prev) => ({ ...prev, [book.id]: true }))
-                      }
+                      variant="outline-primary"
+                      onClick={() => setEditableRows((prev) => ({ ...prev, [book.id]: true }))}
                     >
                       Edit
                     </button>
                   )}
                 </td>
                 <td>
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => handleDelete(book.id)}
-                  >
+                  <button variant="outline-danger" onClick={() => handleDelete(book.id)}>
                     Delete
                   </button>
                 </td>
@@ -132,57 +126,90 @@ const BookTable = ({
       )}
 
       {showMobileTable && (
-  <div className="mobile-table px-2">
-    {currentBooks.map((book, index) => (
-      <div 
-        key={book.id} 
-        className="mobile-table-row border rounded p-3 mb-3" 
-        style={{ backgroundColor: '#f8f9fa' }}
-      >
-        <div className="mobile-table-cell mb-2">
-          <strong>Book:</strong> {book.name}
+        <div className="mobile-table px-2">
+          {currentBooks.map((book) => (
+            <div key={book.id} className="mobile-table-row border rounded p-3 mb-3" style={{ backgroundColor: '#f8f9fa' }}>
+              <div className="mobile-table-cell mb-2">
+                <strong>Book:</strong>
+                {editableRows[book.id] ? (
+                  <input
+                    type="text"
+                    name="name"
+                    value={book.name}
+                    onChange={(e) => handleInputChange(book.id, e)}
+                    className="w-100"
+                  />
+                ) : (
+                  book.name
+                )}
+              </div>
+              <div className="mobile-table-cell mb-2">
+                <strong>Author:</strong>
+                {editableRows[book.id] ? (
+                  <input
+                    type="text"
+                    name="author"
+                    value={book.author}
+                    onChange={(e) => handleInputChange(book.id, e)}
+                    className="w-100"
+                  />
+                ) : (
+                  book.author
+                )}
+              </div>
+              <div className="mobile-table-cell mb-2">
+                <strong>Genre:</strong>
+                {editableRows[book.id] ? (
+                  <input
+                    type="text"
+                    name="genre"
+                    value={book.genre}
+                    onChange={(e) => handleInputChange(book.id, e)}
+                    className="w-100"
+                  />
+                ) : (
+                  book.genre
+                )}
+              </div>
+              <div className="mobile-table-cell mb-2">
+                <strong>Year Published:</strong>
+                {editableRows[book.id] ? (
+                  <input
+                    type="number"
+                    name="publication_year"
+                    value={book.publication_year}
+                    onChange={(e) => handleInputChange(book.id, e)}
+                    className="w-100"
+                  />
+                ) : (
+                  book.publication_year
+                )}
+              </div>
+              <div className="mobile-table-cell mb-2">
+                {editableRows[book.id] ? (
+                  <button className="btn btn-success w-100" onClick={() => handleSave(book.id, book)}>
+                    Save
+                  </button>
+                ) : (
+                  <button
+                    className="btn btn-primary w-100"
+                    onClick={() => setEditableRows((prev) => ({ ...prev, [book.id]: true }))}
+                  >
+                    Edit
+                  </button>
+                )}
+              </div>
+              <div className="mobile-table-cell">
+                <button
+                  className="btn btn-danger w-100"
+                  onClick={() => handleDelete(book.id)} >
+                  Delete
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="mobile-table-cell mb-2">
-          <strong>Author:</strong> {book.author}
-        </div>
-        <div className="mobile-table-cell mb-2">
-          <strong>Genre:</strong> {book.genre}
-        </div>
-        <div className="mobile-table-cell mb-2">
-          <strong>Year Published:</strong> {book.publication_year}
-        </div>
-        <div className="mobile-table-cell mb-2">
-          {editableRows[book.id] ? (
-            <button
-              className="btn btn-success w-100"
-              onClick={() => handleSave(book.id, book)}
-            >
-              Save
-            </button>
-          ) : (
-            <button
-              className="btn btn-primary w-100"
-              onClick={() =>
-                setEditableRows((prev) => ({ ...prev, [book.id]: true }))
-              }
-            >
-              Edit
-            </button>
-          )}
-        </div>
-        <div className="mobile-table-cell">
-          <button
-            className="btn btn-danger w-100"
-            onClick={() => handleDelete(book.id)}
-          >
-            Delete
-          </button>
-        </div>
-      </div>
-    ))}
-  </div>
-)}
-
+      )}
     </div>
   );
 };

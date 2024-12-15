@@ -3,7 +3,10 @@ import html2pdf from "html2pdf.js";
 
 const GeneratePDF = ({ books }) => {
   const generatePDF = () => {
+    // Get the table element to capture its content
     const element = document.getElementById("tableContent");
+
+    // PDF options
     const options = {
       margin: 1,
       filename: "table-data.pdf",
@@ -12,10 +15,18 @@ const GeneratePDF = ({ books }) => {
       jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
     };
 
+    // Generate and save the PDF
     html2pdf().set(options).from(element).save();
   };
 
-  return generatePDF;
+  return (
+    <div>
+      {/* Add a button to trigger the PDF generation */}
+      <button onClick={generatePDF} type="button" className="btn btn-info">
+        Download BookList PDF
+      </button>
+    </div>
+  );
 };
 
 export default GeneratePDF;

@@ -4,7 +4,7 @@ import { Alert } from "react-bootstrap";
 const AlertComponent = ({ showAlert, alertMessage, setShowAlert }) => {
   if (showAlert) {
     return (
-      <Alert variant="success" className="alert-orange" onClose={() => setShowAlert(false)} >
+      <Alert  className="alert-oranges" onClose={() => setShowAlert(false)} >
         {alertMessage}
       </Alert>
     );

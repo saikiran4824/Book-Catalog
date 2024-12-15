@@ -33,15 +33,15 @@ function BookSearch() {
     <>
       <NavBar />
      
-      <div className="container mt-5">
+      <div className="container mt-2">
         <h1 className="text-center">Book Search</h1>
         <form>
           <div className="form-row ">
-            <div className="form-group col-md-12 p-5">
+            <div className="form-group col-md-12 p-3">
               <label htmlFor="search ">Search by Book Name or Author</label>
               <input
                 type="text"
-                className="form-control m-3"
+                className="form-control m-3 "
                 id="search"
                 name="search"
                 value={searchTerm}

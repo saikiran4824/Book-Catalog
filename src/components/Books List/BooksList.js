@@ -3,7 +3,6 @@ import NavBar from "../NavBar/NavBar";
 import BookTable from "./BookTable";
 import Paginationc from "./Paginationc";
 import AlertComponent from "./AlertComponent";
-import ButtonGroup from "./ButtonGroup";
 import GeneratePDF from "./GeneratePDF";
 import ShareBookList from "./ShareBookList";
 const BookList = () => {
@@ -38,16 +37,16 @@ const BookList = () => {
   return (
     <div>
       <NavBar />
-      <ButtonGroup
-        generatePDF={() => <GeneratePDF books={books} />}
-        handleShare={() => <ShareBookList books={books} />}
-      />
+      <div class="container">
+  <h1 class="text-center display-4 font-weight-bold">List of Books</h1>
+</div>
+
+      
       <AlertComponent
         showAlert={showAlert}
         alertMessage={alertMessage}
         setShowAlert={setShowAlert}
       />
-     {/* <h1 className="text-center mb-2  fw-bold text-primary">Books List</h1> */}
 
       <BookTable
         books={books}
@@ -82,6 +81,16 @@ const BookList = () => {
           setBooks(updatedBooks);
         }}
       />
+      <div className="container mt-4">
+      <div className="row justify-content-center">
+        <div className="col-auto mb-3">
+          <GeneratePDF />
+        </div>
+        <div className="col-auto mb-3">
+          <ShareBookList />
+        </div>
+      </div>
+    </div>
       <Paginationc
         activePage={page}
         itemsCountPerPage={rowsPerPage}
