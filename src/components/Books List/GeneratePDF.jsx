@@ -23,9 +23,14 @@ const GeneratePDF = ({ books }) => {
   return (
     <div>
       {/* Add a button to trigger the PDF generation */}
-      <button onClick={generatePDF} onTouchStart={generatePDF} type="button" className="btn btn-info">
-        Download BookList PDF
-      </button>
+      <button 
+  onClick={generatePDF} 
+ 
+  type="button" 
+  className="btn btn-info d-none d-md-block">
+    Download BookList PDF
+</button>
+
     </div>
   );
 };
