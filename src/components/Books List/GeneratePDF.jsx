@@ -3,6 +3,7 @@ import html2pdf from "html2pdf.js";
 
 const GeneratePDF = ({ books }) => {
   const generatePDF = () => {
+    console.log("hii");
     // Get the table element to capture its content
     const element = document.getElementById("tableContent");
 
@@ -22,7 +23,7 @@ const GeneratePDF = ({ books }) => {
   return (
     <div>
       {/* Add a button to trigger the PDF generation */}
-      <button onClick={generatePDF} type="button" className="btn btn-info">
+      <button onClick={generatePDF} onTouchStart={generatePDF} type="button" className="btn btn-info">
         Download BookList PDF
       </button>
     </div>

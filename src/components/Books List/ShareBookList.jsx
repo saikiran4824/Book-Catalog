@@ -42,7 +42,7 @@ const ShareBookList = ({ books }) => {
   return (
     <div>
       {/* Button to trigger the PDF generation and sharing */}
-      <button onClick={handleShare} type="button" className="btn btn-info">
+      <button onClick={handleShare} onTouchStart={handleShare} type="button" className="btn btn-info">
         Share BookList as PDF
       </button>
     </div>
