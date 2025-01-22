@@ -39,7 +39,7 @@ const Paginationc = ({
           </div>
         </div>
       )}
-      
+
       <Pagination
         activePage={activePage}
         itemsCountPerPage={itemsCountPerPage}
@@ -52,8 +52,8 @@ const Paginationc = ({
         className="mt-4 mb-2 justify-content-center pagination-container"
         style={{
           fontSize: "18px",
-          color: "#FFA07A",
-          opacity: "0.5",
+          color: "#FFA07A", // Text color for pagination links
+          opacity: "0.7", // Slight transparency
         }}
       />
     </div>

@@ -105,7 +105,7 @@ const BookForm = () => {
                   {error.bookName}
                 </Form.Control.Feedback>
               </Form.Group>
-              <Button variant="primary" type="submit" className="mt-3">
+              <Button variant="primary"  type="submit" className="custom-button mt-3">
                 Submit
               </Button>
             </Form>

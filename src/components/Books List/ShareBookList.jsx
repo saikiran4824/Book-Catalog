@@ -46,7 +46,7 @@ const ShareBookList = ({ books }) => {
   return (
     <div>
       {/* Button to trigger the PDF generation and sharing */}
-      <button onClick={handleShare} type="button" className="btn btn-info d-none d-md-block">
+      <button onClick={handleShare} type="button" className="btn btn-info d-none custom-button d-md-block">
         Share BookList as PDF
       </button>
     </div>

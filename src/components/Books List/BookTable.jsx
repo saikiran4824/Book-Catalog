@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Table } from "react-bootstrap";
-import Button from 'react-bootstrap/Button';
+import React from "react";
+import { Table, Button } from "react-bootstrap";
+import '../../App.css';
 
 const BookTable = ({
   books,
@@ -12,22 +12,6 @@ const BookTable = ({
   handleDelete,
   handleInputChange,
 }) => {
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
-  const [showMobileTable, setShowMobileTable] = useState(isMobileView);
-  const [showDesktopTable, setShowDesktopTable] = useState(!isMobileView);
-
-  const handleResize = () => {
-    const isMobile = window.innerWidth < 768;
-    setIsMobileView(isMobile);
-    setShowMobileTable(isMobile);
-    setShowDesktopTable(!isMobile);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const indexOfLastBook = page * rowsPerPage;
   const indexOfFirstBook = indexOfLastBook - rowsPerPage;
   const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
@@ -35,8 +19,8 @@ const BookTable = ({
   return (
     <div className="table-container">
       {/* Desktop View */}
-      {showDesktopTable && (
-        <Table id="tableContent" responsive striped bordered hover >
+      <div className="d-none d-md-block">
+        <Table id="tableContent" responsive striped bordered hover className="styled-table">
           <thead>
             <tr>
               <th>S.No</th>
@@ -59,6 +43,7 @@ const BookTable = ({
                       name="name"
                       value={book.name}
                       onChange={(e) => handleInputChange(book.id, e)}
+                      className="form-control"
                     />
                   ) : (
                     book.name
@@ -71,6 +56,7 @@ const BookTable = ({
                       name="author"
                       value={book.author}
                       onChange={(e) => handleInputChange(book.id, e)}
+                      className="form-control"
                     />
                   ) : (
                     book.author
@@ -83,6 +69,7 @@ const BookTable = ({
                       name="genre"
                       value={book.genre}
                       onChange={(e) => handleInputChange(book.id, e)}
+                      className="form-control"
                     />
                   ) : (
                     book.genre
@@ -95,6 +82,7 @@ const BookTable = ({
                       name="publication_year"
                       value={book.publication_year}
                       onChange={(e) => handleInputChange(book.id, e)}
+                      className="form-control"
                     />
                   ) : (
                     book.publication_year
@@ -102,114 +90,132 @@ const BookTable = ({
                 </td>
                 <td>
                   {editableRows[book.id] ? (
-                    <Button variant="primary" size="sm" onClick={() => handleSave(book.id, book)}>
+                    <Button
+                      variant="success"
+                      className="custom-button"
+                      size="sm"
+                      onClick={() => handleSave(book.id, book)}
+                    >
                       Save
                     </Button>
                   ) : (
-                    <button
+                    <Button
                       variant="outline-primary"
+                      className="custom-button"
                       onClick={() => setEditableRows((prev) => ({ ...prev, [book.id]: true }))}
                     >
                       Edit
-                    </button>
+                    </Button>
                   )}
                 </td>
                 <td>
-                  <button variant="outline-danger" onClick={() => handleDelete(book.id)}>
+                  <Button
+                    variant="outline-danger"
+                    className="custom-button"
+                    onClick={() => handleDelete(book.id)}
+                  >
                     Delete
-                  </button>
+                  </Button>
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
-      )}
+      </div>
 
-      {showMobileTable && (
-        <div className="mobile-table px-2">
-          {currentBooks.map((book) => (
-            <div key={book.id} className="mobile-table-row border rounded p-3 mb-3" style={{ backgroundColor: '#f8f9fa' }}>
-              <div className="mobile-table-cell mb-2">
-                <strong>Book:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="text"
-                    name="name"
-                    value={book.name}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="w-100"
-                  />
-                ) : (
-                  book.name
-                )}
-              </div>
-              <div className="mobile-table-cell mb-2">
-                <strong>Author:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="text"
-                    name="author"
-                    value={book.author}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="w-100"
-                  />
-                ) : (
-                  book.author
-                )}
-              </div>
-              <div className="mobile-table-cell mb-2">
-                <strong>Genre:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="text"
-                    name="genre"
-                    value={book.genre}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="w-100"
-                  />
-                ) : (
-                  book.genre
-                )}
-              </div>
-              <div className="mobile-table-cell mb-2">
-                <strong>Year Published:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="number"
-                    name="publication_year"
-                    value={book.publication_year}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="w-100"
-                  />
-                ) : (
-                  book.publication_year
-                )}
-              </div>
-              <div className="mobile-table-cell mb-2">
-                {editableRows[book.id] ? (
-                  <button className="btn btn-success w-100" onClick={() => handleSave(book.id, book)}>
-                    Save
-                  </button>
-                ) : (
-                  <button
-                    className="btn btn-primary w-100"
-                    onClick={() => setEditableRows((prev) => ({ ...prev, [book.id]: true }))}
-                  >
-                    Edit
-                  </button>
-                )}
-              </div>
-              <div className="mobile-table-cell">
-                <button
-                  className="btn btn-danger w-100"
-                  onClick={() => handleDelete(book.id)} >
-                  Delete
-                </button>
-              </div>
+      {/* Mobile View */}
+      <div className="d-block d-md-none px-2">
+        {currentBooks.map((book) => (
+          <div
+            key={book.id}
+            className="mobile-table-row border rounded p-3 mb-3"
+            style={{ backgroundColor: '#f8f9fa' }}
+          >
+            <div className="mobile-table-cell mb-2">
+              <strong>Book:</strong>
+              {editableRows[book.id] ? (
+                <input
+                  type="text"
+                  name="name"
+                  value={book.name}
+                  onChange={(e) => handleInputChange(book.id, e)}
+                  className="form-control w-100"
+                />
+              ) : (
+                book.name
+              )}
             </div>
-          ))}
-        </div>
-      )}
+            <div className="mobile-table-cell mb-2">
+              <strong>Author:</strong>
+              {editableRows[book.id] ? (
+                <input
+                  type="text"
+                  name="author"
+                  value={book.author}
+                  onChange={(e) => handleInputChange(book.id, e)}
+                  className="form-control w-100"
+                />
+              ) : (
+                book.author
+              )}
+            </div>
+            <div className="mobile-table-cell mb-2">
+              <strong>Genre:</strong>
+              {editableRows[book.id] ? (
+                <input
+                  type="text"
+                  name="genre"
+                  value={book.genre}
+                  onChange={(e) => handleInputChange(book.id, e)}
+                  className="form-control w-100"
+                />
+              ) : (
+                book.genre
+              )}
+            </div>
+            <div className="mobile-table-cell mb-2">
+              <strong>Year Published:</strong>
+              {editableRows[book.id] ? (
+                <input
+                  type="number"
+                  name="publication_year"
+                  value={book.publication_year}
+                  onChange={(e) => handleInputChange(book.id, e)}
+                  className="form-control w-100"
+                />
+              ) : (
+                book.publication_year
+              )}
+            </div>
+            <div className="mobile-table-cell mb-2">
+              {editableRows[book.id] ? (
+                <Button
+                  className="custom-button w-48 me-2"
+                  variant="success"
+                  onClick={() => handleSave(book.id, book)}
+                >
+                  Save
+                </Button>
+              ) : (
+                <Button
+                  className="custom-button w-48 me-2"
+                  variant="outline-primary"
+                  onClick={() => setEditableRows((prev) => ({ ...prev, [book.id]: true }))}
+                >
+                  Edit
+                </Button>
+              )}
+              <Button
+                className="custom-button w-48"
+                variant="outline-danger"
+                onClick={() => handleDelete(book.id)}
+              >
+                Delete
+              </Button>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
