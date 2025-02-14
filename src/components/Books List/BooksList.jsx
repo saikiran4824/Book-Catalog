@@ -5,6 +5,7 @@ import Paginationc from "./Paginationc";
 import AlertComponent from "./AlertComponent";
 import GeneratePDF from "./GeneratePDF";
 import ShareBookList from "./ShareBookList";
+
 const BookList = () => {
   const [books, setBooks] = useState([]);
   const [page, setPage] = useState(1);
@@ -14,15 +15,30 @@ const BookList = () => {
   const [editableRows, setEditableRows] = useState({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  
+  // State for selected author
+  const [selectedAuthor, setSelectedAuthor] = useState("Fantastic World");
+
+  // List of authors
+  const authorsList = [
+    "All",
+    "Fantastic World",
+    "Sudha Murthy",
+    "Ruskin Bond",
+    "Vikram Chandra",
+    "Vikram Seth",
+    "J.K. Rowling",
+     // Added as per your request earlier
+  ];
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/data.json") // Ensure this is the correct path for your JSON data
       .then((response) => response.json())
       .then((data) => {
         setBooks(data);
         setLoading(false);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error("Error fetching books:", error));
   }, []);
 
   const handlePageChange = (pageNumber) => {
@@ -34,22 +50,48 @@ const BookList = () => {
     }, 500);
   };
 
+  // Filter books based on selected author
+  const filteredBooks = books.filter((book) => {
+    return selectedAuthor === "All" || book.author === selectedAuthor;
+  });
+
   return (
     <div>
       <NavBar />
-      <div class="container">
-  <h1 class="text-center display-4 font-weight-bold">List of Books</h1>
-</div>
+      <div className="container">
+        <h1 className="text-center display-4 font-weight-bold">List of Books</h1>
+      </div>
 
-      
       <AlertComponent
         showAlert={showAlert}
         alertMessage={alertMessage}
         setShowAlert={setShowAlert}
       />
 
+      {/* Author Filter */}
+      <div className="container mt-4">
+        <div className="row justify-content-center">
+          {authorsList.map((author) => (
+            <div key={author} className="col-auto mb-3">
+            <button
+  className={`btn ${
+    selectedAuthor === author
+      ? "btn-custom-active"  // Active button uses the custom style
+      : "btn-custom-inactive" // Inactive button uses the custom style
+  }`}
+  onClick={() => setSelectedAuthor(author)}
+>
+  {author}
+</button>
+
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Book Table with filtered books */}
       <BookTable
-        books={books}
+        books={filteredBooks}
         page={page}
         rowsPerPage={rowsPerPage}
         editableRows={editableRows}
@@ -81,20 +123,22 @@ const BookList = () => {
           setBooks(updatedBooks);
         }}
       />
+
       <div className="container mt-4">
-      <div className="row justify-content-center">
-        <div className="col-auto mb-3">
+        <div className="row justify-content-center">
+          <div className="col-auto mb-3">
           <GeneratePDF />
-        </div>
-        <div className="col-auto mb-3">
-          <ShareBookList />
+          </div>
+          <div className="col-auto mb-3">
+            <ShareBookList />
+          </div>
         </div>
       </div>
-    </div>
+
       <Paginationc
         activePage={page}
         itemsCountPerPage={rowsPerPage}
-        totalItemsCount={books.length}
+        totalItemsCount={filteredBooks.length}
         pageRangeDisplayed={5}
         onChange={handlePageChange}
       />

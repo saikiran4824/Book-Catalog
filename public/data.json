@@ -1,702 +1,1087 @@
 [
-    {
+  {
       "id": 1,
-      "name": "The Midnight Library",
-      "genre": "Fantasy",
-      "author": "Matt Haig",
-      "publication_year": 2020
-    },
-    {
+      "name": "The White Tiger",
+      "genre": "Thriller",
+      "author": "Aravind Adiga",
+      "publication_year": 2008
+  },
+  {
       "id": 2,
-      "name": "The Invisible Life of Addie LaRue",
+      "name": "A Fine Balance",
       "genre": "Historical Fiction",
-      "author": "V.E. Schwab",
-      "publication_year": 2020
-    },
-    {
+      "author": "Rohinton Mistry",
+      "publication_year": 1995
+  },
+  {
       "id": 3,
-      "name": "The Night She Disappeared",
-      "genre": "Mystery",
-      "author": "Lisa Jewell",
-      "publication_year": 2021
-    },
-    {
-      "id": 4,
-      "name": "The Last Thing He Told Me",
-      "genre": "Thriller",
-      "author": "Laura Dave",
-      "publication_year": 2021
-    },
-    {
-      "id": 5,
-      "name": "Apples Never Fall",
-      "genre": "Domestic Fiction",
-      "author": "Liane Moriarty",
-      "publication_year": 2021
-    },
-    {
-      "id": 6,
-      "name": "Cloud Cuckoo Land",
+      "name": "The God of Small Things",
       "genre": "Literary Fiction",
-      "author": "Anthony Doerr",
-      "publication_year": 2021
-    },
-    {
-      "id": 7,
-      "name": "The Lincoln Highway",
-      "genre": "Historical Fiction",
-      "author": "Amor Towles",
-      "publication_year": 2021
-    },
-    {
-      "id": 8,
-      "name": "The Judge's List",
-      "genre": "Thriller",
-      "author": "John Grisham",
-      "publication_year": 2021
-    },
-    {
-      "id": 9,
-      "name": "Wish You Were Here",
-      "genre": "Romance",
-      "author": "Jodi Picoult",
-      "publication_year": 2022
-    },
-    {
-      "id": 10,
-      "name": "It Ends with Us",
-      "genre": "Romance",
-      "author": "Colleen Hoover",
-      "publication_year": 2016
-    },
-    {
-      "id": 11,
-      "name": "Verity",
-      "genre": "Psychological Thriller",
-      "author": "Colleen Hoover",
-      "publication_year": 2019
-    },
-    {
-      "id": 12,
-      "name": "The Seven Husbands of Evelyn Hugo",
-      "genre": "Contemporary",
-      "author": "Taylor Jenkins Reid",
-      "publication_year": 2017
-    },
-    {
-      "id": 13,
-      "name": "The Song of Achilles",
-      "genre": "Historical Fiction",
-      "author": "Madeline Miller",
+      "author": "Arundhati Roy",
+      "publication_year": 1997
+  },
+  {
+      "id": 4,
+      "name": "The Shiva Trilogy",
+      "genre": "Mythology, Fiction",
+      "author": "Amish Tripathi",
+      "publication_year": 2010
+  },
+  {
+      "id": 5,
+      "name": "The Immortals of Meluha",
+      "genre": "Fantasy, Mythology",
+      "author": "Amish Tripathi",
+      "publication_year": 2010
+  },
+  {
+      "id": 6,
+      "name": "The Secret of the Nagas",
+      "genre": "Fantasy, Mythology",
+      "author": "Amish Tripathi",
       "publication_year": 2011
-    },
-    {
-      "id": 14,
-      "name": "The Song of Troy",
+  },
+  {
+      "id": 7,
+      "name": "The Oath of the Vayuputras",
+      "genre": "Fantasy, Mythology",
+      "author": "Amish Tripathi",
+      "publication_year": 2013
+  },
+  {
+      "id": 8,
+      "name": "The Palace of Illusions",
+      "genre": "Historical Fiction, Mythology",
+      "author": "Chitra Banerjee Divakaruni",
+      "publication_year": 2008
+  },
+  {
+      "id": 9,
+      "name": "The Alchemist",
+      "genre": "Fiction, Adventure",
+      "author": "Paulo Coelho",
+      "publication_year": 1988
+  },
+  {
+      "id": 10,
+      "name": "A Man Called Ove",
+      "genre": "Fiction, Humor",
+      "author": "Fredrik Backman",
+      "publication_year": 2012
+  },
+  {
+      "id": 11,
+      "name": "The Monk Who Sold His Ferrari",
+      "genre": "Self-help, Fiction",
+      "author": "Robin Sharma",
+      "publication_year": 1997
+  },
+  {
+      "id": 12,
+      "name": "The Kite Runner",
       "genre": "Historical Fiction",
-      "author": "Colleen McCullough",
-      "publication_year": 1998
-    },
-    {
-      "id": 15,
-      "name": "The Nightingale",
-      "genre": "Historical Fiction",
-      "author": "Kristin Hannah",
-      "publication_year": 2015
-    },
-    {
-      "id": 16,
-      "name": "The Hate U Give",
-      "genre": "Young Adult",
-      "author": "Angie Thomas",
-      "publication_year": 2017
-    },
-    {
-      "id": 17,
-      "name": "The Power",
-      "genre": "Science Fiction",
-      "author": "Naomi Alderman",
-      "publication_year": 2016
-    },
-    {
-      "id": 18,
-      "name": "The 7 1/2 Deaths of Evelyn Hardcastle",
-      "genre": "Mystery",
-      "author": "Stuart Turton",
-      "publication_year": 2018
-    },
-    {
-      "id": 19,
-      "name": "The Devil in the White City",
-      "genre": "Historical Non-Fiction",
-      "author": "Erik Larson",
+      "author": "Khaled Hosseini",
       "publication_year": 2003
-    },
-    {
+  },
+  {
+      "id": 13,
+      "name": "The Perks of Being a Wallflower",
+      "genre": "Young Adult Fiction",
+      "author": "Stephen Chbosky",
+      "publication_year": 1999
+  },
+  {
+      "id": 14,
+      "name": "Sapiens: A Brief History of Humankind",
+      "genre": "Non-fiction, History",
+      "author": "Yuval Noah Harari",
+      "publication_year": 2011
+  },
+  {
+      "id": 15,
+      "name": "Educated: A Memoir",
+      "genre": "Memoir",
+      "author": "Tara Westover",
+      "publication_year": 2018
+  },
+  {
+      "id": 16,
+      "name": "The Power of Now",
+      "genre": "Spirituality, Self-help",
+      "author": "Eckhart Tolle",
+      "publication_year": 1997
+  },
+  {
+      "id": 17,
+      "name": "The Prophet",
+      "genre": "Philosophy, Spirituality",
+      "author": "Kahlil Gibran",
+      "publication_year": 1923
+  },
+  {
+      "id": 18,
+      "name": "The Subtle Art of Not Giving a F*ck",
+      "genre": "Self-help",
+      "author": "Mark Manson",
+      "publication_year": 2016
+  },
+  {
+      "id": 19,
+      "name": "The Road Less Traveled",
+      "genre": "Self-help, Psychology",
+      "author": "M. Scott Peck",
+      "publication_year": 1978
+  },
+  {
       "id": 20,
-      "name": "The Fifth Season",
+      "name": "A Short History of Nearly Everything",
+      "genre": "Non-fiction, Science",
+      "author": "Bill Bryson",
+      "publication_year": 2003
+  },
+  {
+      "id": 21,
+      "name": "The Art of Happiness",
+      "genre": "Self-help, Philosophy",
+      "author": "Dalai Lama",
+      "publication_year": 1998
+  },
+  {
+      "id": 22,
+      "name": "The Four Agreements",
+      "genre": "Self-help, Spirituality",
+      "author": "Don Miguel Ruiz",
+      "publication_year": 1997
+  },
+  {
+      "id": 23,
+      "name": "The Bhagavad Gita",
+      "genre": "Spirituality, Philosophy",
+      "author": "Vyasa",
+      "publication_year": 300
+  },
+  {
+      "id": 24,
+      "name": "The Power of Habit",
+      "genre": "Self-help, Psychology",
+      "author": "Charles Duhigg",
+      "publication_year": 2012
+  },
+  {
+      "id": 25,
+      "name": "Atomic Habits",
+      "genre": "Self-help, Psychology",
+      "author": "James Clear",
+      "publication_year": 2018
+  },
+  {
+      "id": 26,
+      "name": "The Autobiography of Malcolm X",
+      "genre": "Biography",
+      "author": "Malcolm X, Alex Haley",
+      "publication_year": 1965
+  },
+  {
+      "id": 27,
+      "name": "The Great Gatsby",
+      "genre": "Fiction, Classic",
+      "author": "F. Scott Fitzgerald",
+      "publication_year": 1925
+  },
+  {
+      "id": 28,
+      "name": "1984",
+      "genre": "Dystopian Fiction",
+      "author": "George Orwell",
+      "publication_year": 1949
+  },
+  {
+      "id": 29,
+      "name": "The Catcher in the Rye",
+      "genre": "Fiction, Classic",
+      "author": "J.D. Salinger",
+      "publication_year": 1951
+  },
+  {
+      "id": 30,
+      "name": "The Brothers Karamazov",
+      "genre": "Philosophical Fiction",
+      "author": "Fyodor Dostoevsky",
+      "publication_year": 1880
+  },
+  {
+      "id": 31,
+      "name": "The Prophet",
+      "genre": "Spirituality",
+      "author": "Kahlil Gibran",
+      "publication_year": 1923
+  },
+  {
+      "id": 32,
+      "name": "The Lord of the Rings: The Fellowship of the Ring",
       "genre": "Fantasy",
-      "author": "N.K. Jemisin",
+      "author": "J.R.R. Tolkien",
+      "publication_year": 1954
+  },
+  {
+      "id": 33,
+      "name": "The Lord of the Rings: The Two Towers",
+      "genre": "Fantasy",
+      "author": "J.R.R. Tolkien",
+      "publication_year": 1954
+  },
+  {
+      "id": 34,
+      "name": "The Lord of the Rings: The Return of the King",
+      "genre": "Fantasy",
+      "author": "J.R.R. Tolkien",
+      "publication_year": 1955
+  },
+  {
+      "id": 35,
+      "name": "Harry Potter and the Sorcerer's Stone",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 1997
+  },
+  {
+      "id": 36,
+      "name": "Harry Potter and the Chamber of Secrets",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 1998
+  },
+  {
+      "id": 37,
+      "name": "Harry Potter and the Prisoner of Azkaban",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 1999
+  },
+  {
+      "id": 38,
+      "name": "Harry Potter and the Goblet of Fire",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 2000
+  },
+  {
+      "id": 39,
+      "name": "Harry Potter and the Order of the Phoenix",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 2003
+  },
+  {
+      "id": 40,
+      "name": "Harry Potter and the Half-Blood Prince",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 2005
+  },
+  {
+      "id": 41,
+      "name": "Harry Potter and the Deathly Hallows",
+      "genre": "Fantasy",
+      "author": "J.K. Rowling",
+      "publication_year": 2007
+  },
+  {
+      "id": 42,
+      "name": "The Chronicles of Narnia: The Lion, the Witch, and the Wardrobe",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1950
+  },
+  {
+      "id": 43,
+      "name": "The Chronicles of Narnia: Prince Caspian",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1951
+  },
+  {
+      "id": 44,
+      "name": "The Chronicles of Narnia: The Voyage of the Dawn Treader",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1952
+  },
+  {
+      "id": 45,
+      "name": "The Chronicles of Narnia: The Silver Chair",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1953
+  },
+  {
+      "id": 46,
+      "name": "The Chronicles of Narnia: The Horse and His Boy",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1954
+  },
+  {
+      "id": 47,
+      "name": "The Chronicles of Narnia: The Magician's Nephew",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1955
+  },
+  {
+      "id": 48,
+      "name": "The Chronicles of Narnia: The Last Battle",
+      "genre": "Fantasy",
+      "author": "C.S. Lewis",
+      "publication_year": 1956
+  },
+  {
+      "id": 49,
+      "name": "The Secret Garden",
+      "genre": "Fiction, Children's Literature",
+      "author": "Frances Hodgson Burnett",
+      "publication_year": 1911
+  },
+  {
+      "id": 50,
+      "name": "To Kill a Mockingbird",
+      "genre": "Fiction, Classic",
+      "author": "Harper Lee",
+      "publication_year": 1960
+  },
+  {
+      "id": 51,
+      "name": "The Giver",
+      "genre": "Dystopian Fiction",
+      "author": "Lois Lowry",
+      "publication_year": 1993
+  },
+  {
+      "id": 52,
+      "name": "Brida",
+      "genre": "Fiction",
+      "author": "Paulo Coelho",
+      "publication_year": 2006
+  },
+  {
+      "id": 53,
+      "name": "The Pilgrimage",
+      "genre": "Fiction",
+      "author": "Paulo Coelho",
+      "publication_year": 1987
+  },
+  {
+      "id": 54,
+      "name": "Man's Search for Meaning",
+      "genre": "Philosophy, Psychology",
+      "author": "Viktor Frankl",
+      "publication_year": 1946
+  },
+  {
+      "id": 55,
+      "name": "Waking Up",
+      "genre": "Philosophy, Spirituality",
+      "author": "Sam Harris",
+      "publication_year": 2014
+  },
+  {
+      "id": 56,
+      "name": "A Brief History of Time",
+      "genre": "Science",
+      "author": "Stephen Hawking",
+      "publication_year": 1988
+  },
+  {
+      "id": 57,
+      "name": "Outliers",
+      "genre": "Non-fiction, Psychology",
+      "author": "Malcolm Gladwell",
+      "publication_year": 2008
+  },
+  {
+      "id": 58,
+      "name": "Thinking, Fast and Slow",
+      "genre": "Non-fiction, Psychology",
+      "author": "Daniel Kahneman",
+      "publication_year": 2011
+  },
+  {
+      "id": 59,
+      "name": "Quiet",
+      "genre": "Non-fiction, Psychology",
+      "author": "Susan Cain",
+      "publication_year": 2012
+  },
+  {
+      "id": 60,
+      "name": "The Happiness Project",
+      "genre": "Self-help",
+      "author": "Gretchen Rubin",
+      "publication_year": 2009
+  },
+  {
+      "id": 61,
+      "name": "You Are a Badass",
+      "genre": "Self-help",
+      "author": "Jen Sincero",
+      "publication_year": 2013
+  },
+  {
+      "id": 62,
+      "name": "The Universe Has Your Back",
+      "genre": "Self-help",
+      "author": "Gabrielle Bernstein",
+      "publication_year": 2016
+  },
+  {
+      "id": 63,
+      "name": "Big Magic",
+      "genre": "Self-help",
+      "author": "Elizabeth Gilbert",
       "publication_year": 2015
+  },
+  {
+      "id": 64,
+      "name": "Daring Greatly",
+      "genre": "Self-help",
+      "author": "Brene Brown",
+      "publication_year": 2012
+  },
+    {
+        "id": 65,
+        "name": "Wings of Fire",
+        "genre": "Autobiography, Inspirational",
+        "author": "APJ Abdul Kalam",
+        "publication_year": 1999
     },
     {
-        "id": 21,
-        "name": "The Obelisk Gate",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2016
-      },
-      {
-        "id": 22,
-        "name": "The Stone Sky",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2017
-      },
-      {
-        "id": 23,
-        "name": "The Poppy War",
-        "genre": "Fantasy",
-        "author": "R.F. Kuang",
-        "publication_year": 2018
-      },
-      {
-        "id": 24,
-        "name": "The Dragon Republic",
-        "genre": "Fantasy",
-        "author": "R.F. Kuang",
-        "publication_year": 2020
-      },
-      {
-        "id": 25,
-        "name": "The Burning God",
-        "genre": "Fantasy",
-        "author": "R.F. Kuang",
-        "publication_year": 2020
-      },
-      {
-        "id": 26,
-        "name": "The House of Shattered Wings",
-        "genre": "Urban Fantasy",
-        "author": "Aliette de Bodard",
-        "publication_year": 2015
-      },
-      {
-        "id": 27,
-        "name": "The House of Binding Thorns",
-        "genre": "Urban Fantasy",
-        "author": "Aliette de Bodard",
-        "publication_year": 2017
-      },
-      {
-        "id": 28,
-        "name": "The House of Whispers",
-        "genre": "Urban Fantasy",
-        "author": "Aliette de Bodard",
-        "publication_year": 2019
-      },
-      {
-        "id": 29,
-        "name": "The Ten Thousand Doors of January",
-        "genre": "Fantasy",
-        "author": "Alix E. Harrow",
-        "publication_year": 2019
-      },
-      {
-        "id": 30,
-        "name": "The Once and Future Witches",
-        "genre": "Fantasy",
-        "author": "Alix E. Harrow",
-        "publication_year": 2020
-      },
-      {
-        "id": 31,
-        "name": "A Desolation Called Peace",
-        "genre": "Science Fiction",
-        "author": "Arkady Martine",
-        "publication_year": 2021
-      },
-      {
-        "id": 32,
-        "name": "A Memory Called Empire",
-        "genre": "Science Fiction",
-        "author": "Arkady Martine",
-        "publication_year": 2020
-      },
-      {
-        "id": 33,
-        "name": "The City We Became",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2020
-      },
-      {
-        "id": 34,
-        "name": "The World We Make",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2022
-      },
-      {
-        "id": 35,
-        "name": "The First Fifteen Lives of Harry August",
-        "genre": "Science Fiction",
-        "author": "Claire North",
-        "publication_year": 2014
-      },
-      {
-        "id": 36,
-        "name": "The Sudden Appearance of Hope",
-        "genre": "Science Fiction",
-        "author": "Claire North",
-        "publication_year": 2016
-      },
-      {
-        "id": 37,
-        "name": "The End of the Day",
-        "genre": "Science Fiction",
-        "author": "Claire North",
-        "publication_year": 2017
-      },
-      {
-        "id": 38,
-        "name": "84K",
-        "genre": "Science Fiction",
-        "author": "Claire North",
-        "publication_year": 2018
-      },
-      {
-        "id": 39,
-        "name": "The Pursuit of William Abbey",
-        "genre": "Historical Fiction",
-        "author": "Claire North",
-        "publication_year": 2019
-      },
-      {
-        "id": 40,
-        "name": "Notes from the Burning Age",
-        "genre": "Science Fiction",
-        "author": "Claire North",
-        "publication_year": 2021
-      },
-      {
-        "id": 41,
-        "name": "The Black Tides of Heaven",
-        "genre": "Fantasy",
-        "author": "J.Y. Yang",
-        "publication_year": 2017
-      },
-      {
-        "id": 42,
-        "name": "The Red Threads of Fortune",
-        "genre": "Fantasy",
-        "author": "J.Y. Yang",
-        "publication_year": 2017
-      },
-      {
-        "id": 43,
-        "name": "The Descent of Monsters",
-        "genre": "Fantasy",
-        "author": "J.Y. Yang",
-        "publication_year": 2018
-      },
-      {
-        "id": 44,
-        "name": "The Ascent to Godhood",
-        "genre": "Fantasy",
-        "author": "J.Y. Yang",
-        "publication_year": 2019
-      },
-      {
-        "id": 45,
-        "name": "The House in the Cerulean Sea",
-        "genre": "Fantasy",
-        "author": "TJ Klune",
-        "publication_year": 2020
-      },
-      {
-        "id": 46,
-        "name": "The Extraordinaries",
-        "genre": "Young Adult",
-        "author": "TJ Klune",
-        "publication_year": 2020
-      },
-      {
-        "id": 47,
-        "name": "The Invisible Life of Addie LaRue",
-        "genre": "Historical Fiction",
-        "author": "V.E. Schwab",
-        "publication_year": 2020
-      },
-      {
-        "id": 48,
-        "name": "The City of Brass",
-        "genre": "Fantasy",
-        "author": "S.A. Chakraborty",
-        "publication_year": 2017
-      },
-      {
-        "id": 49,
-        "name": "The Kingdom of Copper",
-        "genre": "Fantasy",
-        "author": "S.A. Chakraborty",
-        "publication_year": 2019
-      },
-      {
-        "id": 50,
-        "name": "The Empire of Gold",
-        "genre": "Fantasy",
-        "author": "S.A. Chakraborty",
-        "publication_year": 2020
-      },
-      {
-        "id": 51,
-        "name": "The Gilded Wolves",
-        "genre": "Young Adult",
-        "author": "Roshani Chokshi",
-        "publication_year": 2019
-      },
-      {
-        "id": 52,
-        "name": "The Silvered Serpent",
-        "genre": "Young Adult",
-        "author": "Roshani Chokshi",
-        "publication_year": 2020
-      },
-      {
-        "id": 53,
-        "name": "The Star-Touched Queen",
-        "genre": "Young Adult",
-        "author": "Roshani Chokshi",
-        "publication_year": 2016
-      },
-      {
-        "id": 54,
-        "name": "A Crown of Wishes",
-        "genre": "Young Adult",
-        "author": "Roshani Chokshi",
-        "publication_year": 2017
-      },
-      {
-        "id": 55,
-        "name": "The Bridge Kingdom",
-        "genre": "Fantasy",
-        "author": "Danielle L. Jensen",
-        "publication_year": 2018
-      },
-      {
-        "id": 56,
-        "name": "The Traitor Queen",
-        "genre": "Fantasy",
-        "author": "Danielle L. Jensen",
-        "publication_year": 2019
-      },
-      {
-        "id": 57,
-        "name": "The Dark Shores",
-        "genre": "Fantasy",
-        "author": "Danielle L. Jensen",
-        "publication_year": 2019
-      },
-      {
-        "id": 58,
-        "name": "The Goddess of Fate",
-        "genre": "Fantasy",
-        "author": "Danielle L. Jensen",
-        "publication_year": 2020
-      },
-      {
-        "id": 59,
-        "name": "The Winner's Curse",
-        "genre": "Young Adult",
-        "author": "Marie Rutkoski",
-        "publication_year": 2014
-      },
-      {
-        "id": 60,
-        "name": "The Winner's Crime",
-        "genre": "Young Adult",
-        "author": "Marie Rutkoski",
-        "publication_year": 2015
-      },
-      {
-        "id": 61,
-        "name": "The Winner's Kiss",
-        "genre": "Young Adult",
-        "author": "Marie Rutkoski",
-        "publication_year": 2016
-      },
-      {
-        "id": 62,
-        "name": "The Bridge of Little Wings",
-        "genre": "Fantasy",
-        "author": "Heidi Heilig",
-        "publication_year": 2017
-      },
-      {
-        "id": 63,
-        "name": "For a Muse of Fire",
-        "genre": "Fantasy",
-        "author": "Heidi Heilig",
-        "publication_year": 2018
-      },
-      {
-        "id": 64,
-        "name": "A Kingdom for a Stage",
-        "genre": "Fantasy",
-        "author": "Heidi Heilig",
-        "publication_year": 2019
-      },
-      {
-        "id": 65,
-        "name": "The Kingdom of the Blazing Phoenix",
-        "genre": "Fantasy",
-        "author": "Julie C. Dao",
-        "publication_year": 2018
-      },
-      {
         "id": 66,
-        "name": "Forest of a Thousand Lanterns",
-        "genre": "Fantasy",
-        "author": "Julie C. Dao",
-        "publication_year": 2017
-      },
-      {
+        "name": "Ignited Minds",
+        "genre": "Non-fiction, Inspirational",
+        "author": "APJ Abdul Kalam",
+        "publication_year": 2002
+    },
+    {
         "id": 67,
-        "name": "The Kingdom of the Wicked",
-        "genre": "Fantasy",
-        "author": "Kerri Maniscalco",
-        "publication_year": 2020
-      },
-      {
+        "name": "The Life Tree",
+        "genre": "Spirituality, Self-help",
+        "author": "Sadhguru",
+        "publication_year": 2011
+    },
+    {
         "id": 68,
-        "name": "The Devil Makes Three",
-        "genre": "Mystery",
-        "author": "Teresa Toten",
+        "name": "Inner Engineering",
+        "genre": "Spirituality, Self-help",
+        "author": "Sadhguru",
         "publication_year": 2016
-      },
-      {
+    },
+    {
         "id": 69,
-        "name": "The Weight of Feathers",
-        "genre": "Young Adult",
-        "author": "Anna-Marie McLemore",
-        "publication_year": 2015
-      },
-      {
+        "name": "The Book of Secrets",
+        "genre": "Spirituality, Philosophy",
+        "author": "Osho",
+        "publication_year": 2001
+    },
+    {
         "id": 70,
-        "name": "The Star-Touched Queen",
-        "genre": "Young Adult",
-        "author": "Roshani Chokshi",
-        "publication_year": 2016
-      },
-      {
+        "name": "The Art of Living",
+        "genre": "Spirituality, Philosophy",
+        "author": "Osho",
+        "publication_year": 1989
+    },
+    {
         "id": 71,
-        "name": "When Dimple Met Rishi",
-        "genre": "Romance",
-        "author": "Sandhya Menon",
-        "publication_year": 2017
-      },
-      {
+        "name": "The Only Revolution",
+        "genre": "Philosophy, Spirituality",
+        "author": "Osho",
+        "publication_year": 2003
+    },
+    {
         "id": 72,
-        "name": "From Twinkle, with Love",
-        "genre": "Romance",
-        "author": "Sandhya Menon",
-        "publication_year": 2018
-      },
-      {
+        "name": "The Perennial Wisdom",
+        "genre": "Philosophy, Spirituality",
+        "author": "Jiddu Krishnamurthy",
+        "publication_year": 1991
+    },
+    {
         "id": 73,
-        "name": "There's Something About Sweetie",
-        "genre": "Romance",
-        "author": "Sandhya Menon",
-        "publication_year": 2019
-      },
-      {
+        "name": "Freedom from the Known",
+        "genre": "Philosophy, Self-help",
+        "author": "Jiddu Krishnamurthy",
+        "publication_year": 1969
+    },
+    {
         "id": 74,
-        "name": "10 Things I Hate About Pinky",
-        "genre": "Romance",
-        "author": "Sandhya Menon",
-        "publication_year": 2020
-      },
-      {
+        "name": "The First and Last Freedom",
+        "genre": "Philosophy, Spirituality",
+        "author": "Jiddu Krishnamurthy",
+        "publication_year": 1954
+    },
+    {
         "id": 75,
-        "name": "The Poet X",
-        "genre": "Poetry",
-        "author": "Elizabeth Acevedo",
-        "publication_year": 2018
-      },
-      {
+        "name": "The Complete Works of Swami Vivekananda",
+        "genre": "Spirituality, Philosophy",
+        "author": "Swami Vivekananda",
+        "publication_year": 1964
+    },
+    {
         "id": 76,
-        "name": "With the Fire on High",
-        "genre": "Poetry",
-        "author": "Elizabeth Acevedo",
-        "publication_year": 2019
-      },
-      {
+        "name": "Meditations",
+        "genre": "Philosophy, Spirituality",
+        "author": "Swami Vivekananda",
+        "publication_year": 1901
+    },
+    {
         "id": 77,
-        "name": "Clap When You Land",
-        "genre": "Poetry",
-        "author": "Elizabeth Acevedo",
-        "publication_year": 2020
-      },
-      {
+        "name": "Wise and Otherwise",
+        "genre": "Fiction, Self-help",
+        "author": "Sudha Murthy",
+        "publication_year": 2002
+    },
+    {
         "id": 78,
-        "name": "In the Dream House",
-        "genre": "Memoir",
-        "author": "Carmen Maria Machado",
-        "publication_year": 2019
-      },
-      {
+        "name": "The Day I Stopped Drinking Milk",
+        "genre": "Fiction, Inspirational",
+        "author": "Sudha Murthy",
+        "publication_year": 2006
+    },
+    {
         "id": 79,
-        "name": "Her Body and Other Parties",
-        "genre": "Short Stories",
-        "author": "Carmen Maria Machado",
-        "publication_year": 2017
-      },
-      {
-        "id": 80,
-        "name": "The Poppy War",
-        "genre": "Fantasy",
-        "author": "R.F. Kuang",
-        "publication_year": 2018
-      },
-      {
-        "id": 81,
-        "name": "The Dragon Republic",
-        "genre": "Fantasy",
-        "author": "R.F. Kuang",
-        "publication_year": 2020
-      },
-      {
-        "id": 82,
-        "name": "The Burning God",
-        "genre": "Fantasy",
-        "author": "R.F. Kuang",
-        "publication_year": 2020
-      },
-      {
-        "id": 83,
-        "name": "The Fifth Season",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
+        "name": "The Magic of the Lost Temple",
+        "genre": "Children's Fiction",
+        "author": "Sudha Murthy",
         "publication_year": 2015
-      },
-      {
+    },
+    {
+        "id": 80,
+        "name": "The Blue Umbrella",
+        "genre": "Fiction, Children's Literature",
+        "author": "Ruskin Bond",
+        "publication_year": 2003
+    },
+    {
+        "id": 81,
+        "name": "The Room on the Roof",
+        "genre": "Fiction, Literary",
+        "author": "Ruskin Bond",
+        "publication_year": 1956
+    },
+    {
+        "id": 82,
+        "name": "The Night Train at Deoli",
+        "genre": "Fiction, Short Stories",
+        "author": "Ruskin Bond",
+        "publication_year": 1957
+    },
+    {
+        "id": 83,
+        "name": "The Maharaja's Daughter",
+        "genre": "Fiction, Children's Literature",
+        "author": "Ruskin Bond",
+        "publication_year": 2004
+    },
+    {
         "id": 84,
-        "name": "The Obelisk Gate",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2016
-      },
-      {
+        "name": "The Man Who Would Be King",
+        "genre": "Fiction",
+        "author": "R. K. Narayan",
+        "publication_year": 1997
+    },
+    {
         "id": 85,
-        "name": "The Stone Sky",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2017
-      },
-      {
+        "name": "Swami and Friends",
+        "genre": "Fiction, Literary",
+        "author": "R. K. Narayan",
+        "publication_year": 1935
+    },
+    {
         "id": 86,
-        "name": "The Power",
-        "genre": "Science Fiction",
-        "author": "Naomi Alderman",
-        "publication_year": 2016
-      },
-      {
+        "name": "The Guide",
+        "genre": "Fiction",
+        "author": "R. K. Narayan",
+        "publication_year": 1958
+    },
+    {
         "id": 87,
-        "name": "The Testaments",
-        "genre": "Science Fiction",
-        "author": "Margaret Atwood",
-        "publication_year": 2019
-      },
-      {
+        "name": "Malgudi Days",
+        "genre": "Short Stories",
+        "author": "R. K. Narayan",
+        "publication_year": 1943
+    },
+    {
         "id": 88,
-        "name": "The Water Dancer",
-        "genre": "Historical Fiction",
-        "author": "Ta-Nehisi Coates",
-        "publication_year": 2019
-      },
-      {
+        "name": "The Death of Vishnu",
+        "genre": "Fiction",
+        "author": "Vikram Chandra",
+        "publication_year": 2000
+    },
+    {
         "id": 89,
-        "name": "The Nickel Boys",
-        "genre": "Historical Fiction",
-        "author": "Colson Whitehead",
-        "publication_year": 2019
-      },
-      {
+        "name": "Sacred Games",
+        "genre": "Crime, Thriller",
+        "author": "Vikram Chandra",
+        "publication_year": 2006
+    },
+    {
         "id": 90,
-        "name": "Red, White, and Royal Blue",
-        "genre": "Romance",
-        "author": "Casey McQuiston",
-        "publication_year": 2019
-      },
-      {
+        "name": "The Zoya Factor",
+        "genre": "Fiction, Romance",
+        "author": "Vikram Seth",
+        "publication_year": 2008
+    },
+    {
         "id": 91,
-        "name": "The Family Upstairs",
-        "genre": "Mystery",
-        "author": "Lisa Jewell",
-        "publication_year": 2019
-      },
-      {
+        "name": "A Suitable Boy",
+        "genre": "Fiction",
+        "author": "Vikram Seth",
+        "publication_year": 1993
+    },
+    {
         "id": 92,
-        "name": "The Last House Guest",
-        "genre": "Mystery",
-        "author": "Megan Miranda",
-        "publication_year": 2019
+        "name": "The Golden Gate",
+        "genre": "Poetry",
+        "author": "Vikram Seth",
+        "publication_year": 1986
+    },
+   
+      {
+          "id": 93,
+          "name": "Red Earth and Pouring Rain",
+          "genre": "Fiction, Literary",
+          "author": "Vikram Chandra",
+          "publication_year": 1995
       },
       {
-        "id": 93,
-        "name": "The Stranger Diaries",
-        "genre": "Mystery",
-        "author": "Elly Griffiths",
-        "publication_year": 2019
+          "id": 94,
+          "name": "The Sacred Games",
+          "genre": "Crime, Thriller",
+          "author": "Vikram Chandra",
+          "publication_year": 2006
       },
       {
-        "id": 94,
-        "name": "The 7 1/2 Deaths of Evelyn Hardcastle",
-        "genre": "Mystery",
-        "author": "Stuart Turton",
-        "publication_year": 2018
+          "id": 95,
+          "name": "Love and Longing in Bombay",
+          "genre": "Short Stories, Fiction",
+          "author": "Vikram Chandra",
+          "publication_year": 1997
       },
       {
-        "id": 95,
-        "name": "The Ten Thousand Doors of January",
-        "genre": "Fantasy",
-        "author": "Alix E. Harrow",
-        "publication_year": 2019
+          "id": 96,
+          "name": "The Old Man and The Eagle",
+          "genre": "Memoir",
+          "author": "Vikram Chandra",
+          "publication_year": 2019
       },
       {
-        "id": 96,
-        "name": "The Once and Future Witches",
-        "genre": "Fantasy",
-        "author": "Alix E. Harrow",
-        "publication_year": 2020
+          "id": 97,
+          "name": "The Hindu Way of Life",
+          "genre": "Spirituality, Religion",
+          "author": "Sudha Murthy",
+          "publication_year": 2009
       },
       {
-        "id": 97,
-        "name": "The House in the Cerulean Sea",
-        "genre": "Fantasy",
-        "author": "TJ Klune",
-        "publication_year": 2020
+          "id": 98,
+          "name": "How I Taught My Grandmother to Read and Other Stories",
+          "genre": "Short Stories, Fiction",
+          "author": "Sudha Murthy",
+          "publication_year": 2003
       },
       {
-        "id": 98,
-        "name": "The Extraordinaries",
-        "genre": "Young Adult",
-        "author": "TJ Klune",
-        "publication_year": 2020
+          "id": 99,
+          "name": "The Cow Who Sang a Song About the Moon",
+          "genre": "Children's Fiction",
+          "author": "Sudha Murthy",
+          "publication_year": 2013
       },
       {
-        "id": 99,
-        "name": "The Invisible Life of Addie LaRue",
-        "genre": "Historical Fiction",
-        "author": "V.E. Schwab",
-        "publication_year": 2020
+          "id": 100,
+          "name": "The Magic of the Lost Temple",
+          "genre": "Children's Fiction",
+          "author": "Sudha Murthy",
+          "publication_year": 2015
       },
       {
-        "id": 100,
-        "name": "The City We Became",
-        "genre": "Fantasy",
-        "author": "N.K. Jemisin",
-        "publication_year": 2020
-      }
-    ]
+          "id": 101,
+          "name": "The Wise and Otherwise",
+          "genre": "Memoir, Stories",
+          "author": "Sudha Murthy",
+          "publication_year": 2002
+      },
+      {
+          "id": 102,
+          "name": "The Mother I Never Knew",
+          "genre": "Fiction",
+          "author": "Vikram Seth",
+          "publication_year": 2000
+      },
+      {
+          "id": 103,
+          "name": "Beastly Tales",
+          "genre": "Children's Fiction, Poetry",
+          "author": "Vikram Seth",
+          "publication_year": 1992
+      },
+      {
+          "id": 104,
+          "name": "The Bridge of Clay",
+          "genre": "Fiction",
+          "author": "Vikram Seth",
+          "publication_year": 2019
+      },
+      {
+          "id": 105,
+          "name": "The Golden Gate",
+          "genre": "Poetry, Novel",
+          "author": "Vikram Seth",
+          "publication_year": 1986
+      },
+      {
+          "id": 106,
+          "name": "Ruskin Bond’s Book of Nature",
+          "genre": "Nature, Children's Non-fiction",
+          "author": "Ruskin Bond",
+          "publication_year": 2009
+      },
+      {
+          "id": 107,
+          "name": "The Ruskin Bond Omnibus",
+          "genre": "Fiction, Collection",
+          "author": "Ruskin Bond",
+          "publication_year": 2004
+      },
+      {
+          "id": 108,
+          "name": "The Best of Ruskin Bond",
+          "genre": "Fiction, Short Stories",
+          "author": "Ruskin Bond",
+          "publication_year": 2004
+      },
+      {
+          "id": 109,
+          "name": "The India I Love",
+          "genre": "Travel, Non-fiction",
+          "author": "Ruskin Bond",
+          "publication_year": 1999
+      },
+      {
+          "id": 110,
+          "name": "Scenes from a Writer’s Life",
+          "genre": "Autobiography",
+          "author": "Ruskin Bond",
+          "publication_year": 2007
+      },
+      {
+          "id": 111,
+          "name": "The Room on the Roof",
+          "genre": "Fiction, Literary",
+          "author": "Ruskin Bond",
+          "publication_year": 1956
+      },
+      {
+          "id": 112,
+          "name": "The Blue Umbrella",
+          "genre": "Children's Literature, Fiction",
+          "author": "Ruskin Bond",
+          "publication_year": 2003
+      },
+        {
+            "id": 113,
+            "name": "The Intelligent Investor",
+            "genre": "Stock Market, Finance",
+            "author": "Benjamin Graham",
+            "publication_year": 1949
+        },
+        {
+            "id": 114,
+            "name": "A Random Walk Down Wall Street",
+            "genre": "Stock Market, Finance",
+            "author": "Burton G. Malkiel",
+            "publication_year": 1973
+        },
+        {
+            "id": 115,
+            "name": "The Little Book of Common Sense Investing",
+            "genre": "Stock Market, Finance",
+            "author": "John C. Bogle",
+            "publication_year": 2007
+        },
+        {
+            "id": 116,
+            "name": "Flash Boys",
+            "genre": "Stock Market, Trading",
+            "author": "Michael Lewis",
+            "publication_year": 2014
+        },
+        {
+            "id": 117,
+            "name": "Market Wizards",
+            "genre": "Stock Market, Trading",
+            "author": "Jack D. Schwager",
+            "publication_year": 1989
+        },
+        {
+            "id": 118,
+            "name": "The Laws of Wealth",
+            "genre": "Stock Market, Finance",
+            "author": "Daniel Crosby",
+            "publication_year": 2016
+        },
+        {
+            "id": 119,
+            "name": "Thinking, Fast and Slow",
+            "genre": "Psychology, Economics",
+            "author": "Daniel Kahneman",
+            "publication_year": 2011
+        },
+        {
+            "id": 120,
+            "name": "Rich Dad Poor Dad",
+            "genre": "Finance, Investment",
+            "author": "Robert Kiyosaki",
+            "publication_year": 1997
+        },
+        {
+            "id": 121,
+            "name": "Principles: Life and Work",
+            "genre": "Business, Economics",
+            "author": "Ray Dalio",
+            "publication_year": 2017
+        },
+        {
+            "id": 122,
+            "name": "Law 101: Everything You Need to Know About American Law",
+            "genre": "Law, Non-fiction",
+            "author": "Jay M. Feinman",
+            "publication_year": 2006
+        },
+        {
+            "id": 123,
+            "name": "The Four Agreements: A Practical Guide to Personal Freedom",
+            "genre": "Self-help, Law",
+            "author": "Don Miguel Ruiz",
+            "publication_year": 1997
+        },
+        {
+            "id": 124,
+            "name": "The Constitution of India",
+            "genre": "Law, Reference",
+            "author": "P.M. Bakshi",
+            "publication_year": 2015
+        },
+        {
+            "id": 125,
+            "name": "The Prince",
+            "genre": "Law, Political Philosophy",
+            "author": "Niccolò Machiavelli",
+            "publication_year": 1532
+        },
+        {
+            "id": 126,
+            "name": "Black's Law Dictionary",
+            "genre": "Law, Reference",
+            "author": "Bryan A. Garner",
+            "publication_year": 2020
+        },
+        {
+            "id": 127,
+            "name": "Principles of Corporate Finance",
+            "genre": "Finance, Law",
+            "author": "Richard A. Brealey, Stewart C. Myers",
+            "publication_year": 1988
+        },
+        {
+            "id": 128,
+            "name": "The Logic of Scientific Discovery",
+            "genre": "Mathematics, Philosophy",
+            "author": "Karl Popper",
+            "publication_year": 1934
+        },
+        {
+            "id": 129,
+            "name": "A Brief History of Time",
+            "genre": "Physics, Mathematics",
+            "author": "Stephen Hawking",
+            "publication_year": 1988
+        },
+        {
+            "id": 130,
+            "name": "Fermat's Enigma: The Epic Quest to Solve the World's Greatest Mathematical Problem",
+            "genre": "Mathematics, Non-fiction",
+            "author": "Simon Singh",
+            "publication_year": 1997
+        },
+        {
+            "id": 131,
+            "name": "Gödel, Escher, Bach: An Eternal Golden Braid",
+            "genre": "Mathematics, Philosophy",
+            "author": "Douglas Hofstadter",
+            "publication_year": 1979
+        },
+        {
+            "id": 132,
+            "name": "The Man Who Knew Infinity: A Life of the Genius Ramanujan",
+            "genre": "Mathematics, Biography",
+            "author": "Robert Kanigel",
+            "publication_year": 1991
+        },
+        {
+            "id": 133,
+            "name": "The Joy of x: A Guided Tour of Math, from One to Infinity",
+            "genre": "Mathematics, Non-fiction",
+            "author": "Steven Strogatz",
+            "publication_year": 2012
+        },
+        {
+            "id": 134,
+            "name": "Mathematics: A Very Short Introduction",
+            "genre": "Mathematics, Non-fiction",
+            "author": "Timothy Gowers",
+            "publication_year": 2002
+        },
+        {
+            "id": 135,
+            "name": "The Poincaré Conjecture: In Search of the Shape of the Universe",
+            "genre": "Mathematics, Non-fiction",
+            "author": "Donal O'Shea",
+            "publication_year": 2007
+        },
+        {
+            "id": 136,
+            "name": "How to Lie with Statistics",
+            "genre": "Mathematics, Statistics",
+            "author": "Darrell Huff",
+            "publication_year": 1954
+        },
+        {
+            "id": 137,
+            "name": "Mathematical Thought from Ancient to Modern Times",
+            "genre": "Mathematics, History",
+            "author": "Morris Kline",
+            "publication_year": 1972
+        },
+        {
+            "id": 138,
+            "name": "The Elements of Statistical Learning: Data Mining, Inference, and Prediction",
+            "genre": "Mathematics, Statistics",
+            "author": "Trevor Hastie, Robert Tibshirani, Jerome Friedman",
+            "publication_year": 2009
+        },
+        {
+            "id": 139,
+            "name": "The Art of Trading: A Complete Guide to Trading the Financial Markets",
+            "genre": "Trading, Finance",
+            "author": "Christopher Tate",
+            "publication_year": 2009
+        },
+        {
+            "id": 140,
+            "name": "Common Stocks and Uncommon Profits",
+            "genre": "Stock Market, Finance",
+            "author": "Philip Fisher",
+            "publication_year": 1958
+        },
+        {
+            "id": 141,
+            "name": "One Up On Wall Street",
+            "genre": "Stock Market, Finance",
+            "author": "Peter Lynch",
+            "publication_year": 1989
+        },
+        {
+            "id": 142,
+            "name": "The Alchemy of Finance",
+            "genre": "Finance, Stock Market",
+            "author": "George Soros",
+            "publication_year": 1987
+        },
+        
+          {
+            "id": 143,
+            "name": "Nuvvostanante Nenoddantana",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2005
+          },
+          {
+            "id": 144,
+            "name": "Sacred Games",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2006
+          },
+          {
+            "id": 145,
+            "name": "Premalu",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2002
+          },
+          {
+            "id": 146,
+            "name": "Ye Maaya Chesave",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2010
+          },
+          {
+            "id": 147,
+            "name": "Arjun Reddy",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2017
+          },
+          {
+            "id": 148,
+            "name": "Animal",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2023
+          },
+          {
+            "id": 149,
+            "name": "Darshana",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2022
+          },
+          {
+            "id": 150,
+            "name": "Padi Padi Leche Manasu",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2018
+          },
+          {
+            "id": 151,
+            "name": "Pokiri",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2006
+          },
+          {
+            "id": 152,
+            "name": "Jalsa",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2008
+          },
+          {
+            "id": 153,
+            "name": "Titanic",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 1997
+          },
+          {
+            "id": 154,
+            "name": "Scam 1992",
+            "genre": "Movie",
+            "author": "Fantastic World",
+            "publication_year": 2020
+          }
+        
+        
+ 
+  
+]
+
