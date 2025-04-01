@@ -7,6 +7,14 @@ const ShareBookList = ({ books }) => {
       // Get the table element to capture its content
       const element = document.getElementById("tableContent");
 
+      // Check if the element exists
+      if (!element) {
+        alert("Table content not found. Please make sure the table exists.");
+        return;
+      }
+
+      console.log("Generating PDF from element:", element);
+
       // PDF options
       const options = {
         margin: 1,
@@ -18,8 +26,9 @@ const ShareBookList = ({ books }) => {
 
       // Generate PDF and create a blob
       const pdfBlob = await html2pdf().set(options).from(element).output("blob");
+      console.log("PDF Blob generated:", pdfBlob);
 
-      // Check if the device supports sharing
+      // Check if the device supports sharing (Web Share API)
       if (navigator.share) {
         const file = new File([pdfBlob], "booklist.pdf", { type: "application/pdf" });
         const shareData = {
@@ -30,12 +39,14 @@ const ShareBookList = ({ books }) => {
 
         // Share the file using the Web Share API
         await navigator.share(shareData);
+        console.log("File shared successfully!");
       } else {
-        // For devices that do not support sharing, trigger a download
+        // Fallback: For devices that do not support sharing, trigger a download
         const link = document.createElement("a");
         link.href = URL.createObjectURL(pdfBlob);
         link.download = "booklist.pdf";
         link.click();
+        console.log("PDF downloaded successfully!");
       }
     } catch (error) {
       console.error("Error sharing:", error);
@@ -46,7 +57,20 @@ const ShareBookList = ({ books }) => {
   return (
     <div>
       {/* Button to trigger the PDF generation and sharing */}
-      <button onClick={handleShare} type="button" className="btn btn-info d-none custom-button d-md-block">
+      <button
+        onClick={handleShare}
+        type="button"
+        className="btn btn-info d-none d-md-block custom-button"
+        style={{
+          backgroundColor: "#3498db", // Primary color for button
+          color: "white", // Text color
+          padding: "10px 20px", // Padding for button
+          fontSize: "16px", // Font size
+          borderRadius: "5px", // Rounded corners
+          border: "none", // No border
+          cursor: "pointer", // Pointer cursor on hover
+        }}
+      >
         Share BookList as PDF
       </button>
     </div>

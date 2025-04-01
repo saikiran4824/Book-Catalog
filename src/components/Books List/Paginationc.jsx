@@ -17,10 +17,13 @@ const Paginationc = ({
     setLoading(true); // Set loading to true when a page is clicked
     onChange(pageNumber); // Call the parent onChange function
 
+    // Scroll to top when the page changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     // Simulate loading time (e.g., fetching new content)
     setTimeout(() => {
       setLoading(false); // Set loading to false once content is loaded
-    }, 1000); // Adjust this timeout as needed (simulating async behavior)
+    }, 100); // Adjust this timeout as needed (simulating async behavior)
   };
 
   return (

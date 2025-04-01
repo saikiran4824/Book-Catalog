@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#3498db" }}>
+    <nav className="navbar navbar-expand-lg bg-black border-bottom ">
       <div className="container-fluid d-flex justify-content-between">
         <a className="navbar-brand fs-2 fw-bold text-uppercase text-white" href="/">
           <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

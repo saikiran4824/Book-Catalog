@@ -1,113 +1,52 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import '../../App.css'; // Make sure you include your custom styles
+import { motion } from "framer-motion";
 
-const BookTable = ({
-  books,
-  page,
-  rowsPerPage,
-  editableRows,
-  setEditableRows,
-  handleSave,
-  handleInputChange,
-}) => {
+const BookTable = ({ books, page, rowsPerPage }) => {
   const indexOfLastBook = page * rowsPerPage;
   const indexOfFirstBook = indexOfLastBook - rowsPerPage;
   const currentBooks = books.slice(indexOfFirstBook, indexOfLastBook);
 
   return (
-    <div className="book-grid-container">
+    <div className="row row-cols-1 row-cols-md-4 m-4 g-4">
       {/* Render each book in a grid item */}
-      {currentBooks.map((book) => (
-        <div key={book.id} className="book-item">
-          <div className="book-box border rounded p-4" style={{ borderColor: '#2b91d4' }}>
-            <div className="book-details">
+      {currentBooks.map((book, index) => (
+        <motion.div
+          key={book.id}
+          className="col"
+          initial={{ opacity: 0, y: 50 }} // Start off screen, with opacity 0
+          animate={{ opacity: 1, y: 0 }}  // Fade in and slide to the original position
+          transition={{
+            duration: 0.9,
+            delay: index * 0.1, // Slight delay for each book for a staggered effect
+          }}
+        >
+          <div
+            className="card h-100 shadow-sm rounded hover-shadow-2xl transition-transform duration-300 ease-in-out transform hover:scale-105"
+            style={{ borderColor: '#2b91d4' }}
+          >
+            <div className="card-body bg-black text-white">
               {/* Book Name */}
-              <div>
-                <strong>Book:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="text"
-                    name="name"
-                    value={book.name}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="form-control"
-                  />
-                ) : (
-                  book.name
-                )}
-              </div>
+              <h5 className="card-title">
+                 {book.name}
+              </h5>
 
               {/* Author */}
-              <div className="mt-3">
-                <strong>Author:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="text"
-                    name="author"
-                    value={book.author}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="form-control"
-                  />
-                ) : (
-                  book.author
-                )}
-              </div>
+              <p className="card-text">
+                <strong>Author:</strong> {book.author}
+              </p>
 
               {/* Genre */}
-              <div className="mt-3">
-                <strong>Genre:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="text"
-                    name="genre"
-                    value={book.genre}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="form-control"
-                  />
-                ) : (
-                  book.genre
-                )}
-              </div>
+              <p className="card-text">
+                <strong>Genre:</strong> {book.genre}
+              </p>
 
               {/* Year Published */}
-              <div className="mt-3">
-                <strong>Year Published:</strong>
-                {editableRows[book.id] ? (
-                  <input
-                    type="number"
-                    name="publication_year"
-                    value={book.publication_year}
-                    onChange={(e) => handleInputChange(book.id, e)}
-                    className="form-control"
-                  />
-                ) : (
-                  book.publication_year
-                )}
-              </div>
-
-              {/* Edit/Save Button */}
-              <div className="mt-4">
-                {editableRows[book.id] ? (
-                  <Button
-                    variant="success"
-                    className="custom-button w-100"
-                    onClick={() => handleSave(book.id, book)}
-                  >
-                    Save
-                  </Button>
-                ) : (
-                  <Button
-                    variant="outline-primary"
-                    className="custom-button w-100"
-                    onClick={() => setEditableRows((prev) => ({ ...prev, [book.id]: true }))}>
-                    Edit
-                  </Button>
-                )}
-              </div>
+              <p className="card-text">
+                <strong>Year Published:</strong> {book.publication_year}
+              </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

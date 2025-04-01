@@ -53,7 +53,16 @@ const GeneratePDF = () => {
       <button
         onClick={generatePDF}
         type="button"
-        className="d-none d-md-block custom-button"
+        className="d-none d-md-block "
+        style={{
+          backgroundColor: "#3498db", // Primary color for button
+          color: "white", // Text color
+          padding: "10px 20px", // Padding for button
+          fontSize: "16px", // Font size
+          borderRadius: "5px", // Rounded corners
+          border: "none", // No border
+          cursor: "pointer", // Pointer cursor on hover
+        }}
       >
         Download Full BookList PDF
       </button>
@@ -67,33 +76,28 @@ const GeneratePDF = () => {
         {/* Add Navbar at the top of the PDF */}
         <NavBar />
 
-        {/* Books Content */}
-        <div className="row mt-4">
-          {books.map((book) => (
-            <div key={book.id} className="col-md-4 mb-4">
-              <div className="book-box border rounded p-4" style={{ borderColor: '#3498db' }}>
-                {/* Book Name */}
-                <div>
-                  <strong>Book:</strong> {book.name}
-                </div>
-
-                {/* Author */}
-                <div className="mt-3">
-                  <strong>Author:</strong> {book.author}
-                </div>
-
-                {/* Genre */}
-                <div className="mt-3">
-                  <strong>Genre:</strong> {book.genre}
-                </div>
-
-                {/* Year Published */}
-                <div className="mt-3">
-                  <strong>Year Published:</strong> {book.publication_year}
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Table for Books */}
+        <div className="table-responsive mt-4 mb-2">
+          <table id="tableContent" className="table table-bordered" style={{ borderColor: '#3498db' }}>
+            <thead>
+              <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Year Published</th>
+              </tr>
+            </thead>
+            <tbody>
+              {books.map((book) => (
+                <tr key={book.id}>
+                  <td>{book.name}</td>
+                  <td>{book.author}</td>
+                  <td>{book.genre}</td>
+                  <td>{book.publication_year}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
