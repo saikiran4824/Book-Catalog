@@ -1,5 +1,6 @@
 import React from "react";
 import html2pdf from "html2pdf.js";
+import './BooksList.css';
 
 const ShareBookList = ({ books }) => {
   const handleShare = async () => {
@@ -60,16 +61,8 @@ const ShareBookList = ({ books }) => {
       <button
         onClick={handleShare}
         type="button"
-        className="btn btn-info d-none d-md-block custom-button"
-        style={{
-          backgroundColor: "#3498db", // Primary color for button
-          color: "white", // Text color
-          padding: "10px 20px", // Padding for button
-          fontSize: "16px", // Font size
-          borderRadius: "5px", // Rounded corners
-          border: "none", // No border
-          cursor: "pointer", // Pointer cursor on hover
-        }}
+        className=" bg-black text-white py-2 px-3 fs-5 rounded border border-primary page-link:hover "
+
       >
         Share BookList as PDF
       </button>

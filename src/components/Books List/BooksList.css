@@ -131,6 +131,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 /* Pagination item styles */
@@ -140,9 +141,8 @@
 
 /* Default page link styles */
 .page-link {
-  background-color: #3498db !important; /* Set background color for pagination links */
+  background-color:#000000  !important; /* Set background color for pagination links */
   color: white !important; /* Text color for links */
-  border: none;
   padding: 6px 12px;
   font-size: 12px;
   border-radius: 5px; /* Rounded corners */
@@ -151,14 +151,16 @@
 
 /* Hover effect for page links */
 .page-link:hover {
-  background-color: #2980b9 !important; /* Darker blue for hover effect */
+  background-color: #fff !important; 
   transform: scale(1.1); /* Slightly increase the size on hover */
+  color: #000 !important; /* Change text color on hover */
 }
 
 /* Active page styling */
 .page-item.active .page-link {
-  background-color: #2077ad !important; 
+  background-color: #000 !important; 
   font-weight: bold; 
+  color: #fff !important;
 }
 
 /* Disabled page link (previous/next button) */

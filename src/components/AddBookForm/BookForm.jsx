@@ -43,7 +43,7 @@ const BookForm = () => {
   return (
     <>
     <NavBar/>
-    <Container className="mt-5">
+    <Container className="mt-2  bg-black text-white">
       <Row className="justify-content-center">
         <Col md={6}>
           <h2 className="text-center mb-4">Add Book</h2>

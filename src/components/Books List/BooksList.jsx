@@ -61,14 +61,17 @@ const BookList = () => {
         <div className="row justify-content-center">
           {authorsList.map((author) => (
             <div key={author} className="col-auto mb-3">
-              <button
-                className={`btn ${
-                  selectedAuthor === author ? "btn-primary" : "btn-secondary"
-                }`}
-                onClick={() => setSelectedAuthor(author)}
-              >
-                {author}
-              </button>
+            <button
+  className={`btn ${
+    selectedAuthor === author ? " bg-white text-black px-3 rounded border border-primary ": "bg-black text-white px-3 rounded border border-primary"
+  }`}
+  onClick={() => {
+    setSelectedAuthor(author);
+    setPage(1); // Reset pagination to first page when filter changes
+  }}
+>
+  {author}
+</button>
             </div>
           ))}
         </div>

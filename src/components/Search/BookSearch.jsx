@@ -33,7 +33,7 @@ function BookSearch() {
     <>
       <NavBar />
      
-      <div className="container mt-2">
+      <div className="container bg-black w-full h-full text-white mt-2">
         <h1 className="text-center">Book Search</h1>
         <form>
           <div className="form-row ">
